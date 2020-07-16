@@ -1,16 +1,16 @@
 // 01 ABSTRACT - Sass only, no direct CSS output
+@import '01-abstract/animationPreset';
 @import '01-abstract/colour';
 @import '01-abstract/flexbox';
 @import '01-abstract/buttonStyleReset';
-@import '01-abstract/shadows';
 
 // 02 BASE - Site-wide styles on HTML elements
-@import '02-base/animations';
 @import '02-base/fonts';
+@import '02-base/icons';
 @import '02-base/site';
 
 // 03 UTILITIES - Re-usable classes using OOCSS logic
 
-// 04 COMPONENTS - Nested component styles in respective component folders
+// 04 COMPONENTS -
 
 // 05 PAGES - styles related to Gatsby pages and templates

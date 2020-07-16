@@ -1,1 +1,1 @@
-<h2 align="center">Nudo Sushi Box Static</h2>
+<h2>Nudo Sushi Box Static</h2>
