@@ -1,1 +1,1 @@
-# nudo-sushi-box-static
+<h2 align="center">Nudo Sushi Box Static</h2>
