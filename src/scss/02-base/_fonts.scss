@@ -31,23 +31,23 @@ body {
 
 h1 {
   font: 700 2rem/2.5rem $font;
-  color: $greyDarkSuper;
+  color: $grey-dark-super;
   letter-spacing: -0.25px;
 }
 
 h2 {
   font: 700 1.5rem/2rem $font;
-  color: $greyDarkSuper;
+  color: $grey-dark-super;
 }
 
 h3 {
   font: 700 1.375rem/1.875rem $font;
-  color: $greyDarkSuper;
+  color: $grey-dark-super;
 }
 
 h4 {
   font: 700 1.125rem/1.5rem $font;
-  color: $greyDarkSuper;
+  color: $grey-dark-super;
 }
 
 h5 {
@@ -63,7 +63,14 @@ strong {
   font-weight: 700;
 }
 
+p {
+}
+
 @media all and (min-width: 800px) {
+  body {
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media all and (min-width: 1100px) {
@@ -83,7 +90,7 @@ strong {
   }
 
   h4 {
-    font-size: calculateRem(21px);
+    font-size: calculate-rem(21px);
     line-height: 1.75rem;
   }
 }

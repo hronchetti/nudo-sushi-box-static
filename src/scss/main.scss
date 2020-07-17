@@ -1,19 +1,28 @@
 // 01 ABSTRACT - Sass only, no direct CSS output
-@import '01-abstract/animation-preset';
+@import '01-abstract/calculate-rem';
 @import '01-abstract/colour';
 @import '01-abstract/flexbox';
-@import '01-abstract/button-style-reset';
-@import '01-abstract/calculate-rem';
+@import '01-abstract/preset-animation';
+@import '01-abstract/preset-button';
 
 // 02 BASE - Site-wide styles on HTML elements
 @import '02-base/fonts';
 @import '02-base/icons';
 @import '02-base/site';
 
-// 03 UTILITIES - Re-usable classes using OOCSS logic
+// 03 COMPONENTS - Re-usable classes for whole elements / elements groups
+@import '03-components/accounts';
+@import '03-components/buttons';
+@import '03-components/faqs';
+@import '03-components/footer';
+@import '03-components/forms';
+@import '03-components/nav';
+@import '03-components/section-how-it-works';
+@import '03-components/section-join-mailing-list';
+@import '03-components/section-social-feed';
 
-// 04 COMPONENTS - Re-usable classes for whole elements
-
-@import '04-components/nav';
-
-// 05 PAGES - styles related to Gatsby pages and templates
+// 04 UTILITIES - Re-usable classes using OOCSS logic
+@import '04-utilities/backgrounds-coloured';
+@import '04-utilities/grids';
+@import '04-utilities/wrappers';
+@import '04-utilities/text-bold';

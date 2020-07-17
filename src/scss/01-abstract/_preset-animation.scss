@@ -1,4 +1,4 @@
-@mixin AnimationPreset {
+@mixin preset-animation {
   // Hardware acceleration preset for animations
   transform: translate3d(0, 0, 0);
   perspective: 1000px;
