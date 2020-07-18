@@ -42,14 +42,6 @@ function buildJS() {
 }
 
 function buildHTML() {
-  return src(srcPath + 'html/**/*.html').pipe(dest(distPath));
-}
-
-function buildStatic() {
-  return src(staticPath + '**/*').pipe(dest(distPath));
-}
-
-function buildIncludes() {
   return src(srcPath + 'html/**/*.html')
     .pipe(
       fileinclude({
@@ -58,6 +50,10 @@ function buildIncludes() {
       })
     )
     .pipe(dest(distPath));
+}
+
+function buildStatic() {
+  return src(staticPath + '**/*').pipe(dest(distPath));
 }
 
 /**
@@ -74,7 +70,6 @@ exports.default = () => {
   });
   watch(srcPath + 'js/**/*.js', buildJS);
   watch(srcPath + 'scss/**/*.scss', buildScss);
-  watch(srcPath + 'html/**/*.html', buildIncludes);
   watch(srcPath + 'html/**/*.html', buildHTML);
   watch(staticPath + '**/*', buildStatic);
   watch([srcPath + 'html/**/*.html', srcPath + 'js/**/*.js', srcPath + 'scss/**/*.scss']).on(
@@ -83,4 +78,4 @@ exports.default = () => {
   );
 };
 
-exports.build = series([buildJS, buildScss, buildIncludes, buildHTML, buildStatic]);
+exports.build = series([buildJS, buildScss, buildHTML, buildStatic]);
