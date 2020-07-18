@@ -1,5 +1,10 @@
 .nav-wrapper {
-  position: relative;
+  position: sticky;
+  background-color: white;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 
   .nav-mobile {
     @include preset-animation;
