@@ -83,6 +83,6 @@ exports.default = () => {
   ]).on("change", browserSync.reload)
 }
 
-exports.build = series([cleanBuild, buildJS, buildScss, buildHTML, buildStatic])
+exports.build = series([buildJS, buildScss, buildHTML, buildStatic])
 
 exports.clean = series(cleanBuild)
