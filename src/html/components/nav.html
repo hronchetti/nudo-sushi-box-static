@@ -1,13 +1,85 @@
 <section class="nav-wrapper">
-  <div class="nav-mobile"></div>
-  <nav>
-    <button class="nav-hamburger">
-      <span class="icon-hamburger"></span>
+  <div class="nav-mobile">
+    <button class="nav-mobile-dismiss">
+      <span class="icon-close"></span>
     </button>
-    <img
-      src="./images/nudo-sushi-box-logo.svg"
-      alt="Nudo Sushi Box logo"
-      title="Nudo Sushi Box logo"
-    />
+    <section class="nav-mobile-links">
+      <ul class="nav-mobile-primary-links">
+        <li>
+          <a class="button-primary button-full-width" href="order-online.html"
+            >Order online</a
+          >
+        </li>
+        <li>
+          <a class="button-secondary button-full-width" href="your-account.html"
+            >Log in</a
+          >
+        </li>
+      </ul>
+      <ul class="nav-mobile-secondary-links">
+        <li>
+          <a class="active" href="/"><span class="selector">Home</span></a>
+        </li>
+        <li>
+          <a href="our-store.html"><span class="selector">Our stores</span></a>
+        </li>
+        <li>
+          <a href="#"><span class="selector">Store menu</span></a>
+        </li>
+        <li>
+          <a href="blog.html"><span class="selector">Blog</span></a>
+        </li>
+        <li>
+          <a href="contact-us.html"><span class="selector">Contact us</span></a>
+        </li>
+      </ul>
+    </section>
+  </div>
+  <nav>
+    <div class="nav-left">
+      <button class="nav-hamburger">
+        <span class="icon-hamburger"></span>
+      </button>
+      <ul class="nav-desktop-links">
+        <li>
+          <a class="link" href="order-online.html">Order online</a>
+        </li>
+        <li>
+          <a class="link" href="our-stores.html">Our stores</a>
+        </li>
+        <li>
+          <a class="link" href="#">Store menu</a>
+        </li>
+      </ul>
+    </div>
+    <div class="nav-logo">
+      <a href="/">
+        <img
+          src="./images/nudo-sushi-box-logo.svg"
+          alt="Nudo Sushi Box logo"
+          title="Nudo Sushi Box logo"
+        />
+      </a>
+    </div>
+    <div class="nav-right">
+      <ul class="nav-desktop-links">
+        <li>
+          <a class="link" href="blog.html">Blog</a>
+        </li>
+        <li>
+          <a class="link" href="contact-us.html">Contact us</a>
+        </li>
+        <li>
+          <a class="link" href="your-account.html">Log in</a>
+        </li>
+      </ul>
+      <button class="nav-basket-wrapper">
+        <div class="nav-basket">
+          <span class="icon-basket"></span>
+          <span class="nav-basket-count">0</span>
+        </div>
+        <span class="nav-basket-total">£0.00</span>
+      </button>
+    </div>
   </nav>
 </section>

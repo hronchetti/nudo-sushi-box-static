@@ -47,15 +47,15 @@
     }
   }
 
-  &.arrow {
+  &.button-arrow {
     position: relative;
     padding-right: 3rem;
     transition: padding-right 250ms ease-in-out, filter 250ms ease-in;
 
     &:after {
-      font-family: 'icons' !important;
+      font-family: "icons" !important;
       font-size: 1.5rem;
-      content: '\e900';
+      content: "\e900";
       display: block;
       position: absolute;
       right: 1rem;
@@ -73,6 +73,11 @@
         padding-right: 3.5rem;
       }
     }
+  }
+
+  &.button-full-width {
+    width: auto;
+    text-align: center;
   }
 }
 
@@ -98,5 +103,6 @@
 .button-secondary {
   @extend %button;
   border: 1px solid $grey-border;
+  padding: calc(0.75rem - 1px); // compensating for border
   background-color: white;
 }
