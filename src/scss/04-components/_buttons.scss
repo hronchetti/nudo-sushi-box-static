@@ -22,6 +22,14 @@
       background-color: #f3f3f5;
     }
   }
+
+  &:disabled {
+    color: $grey-light;
+  }
+
+  &.grey {
+    color: $grey;
+  }
 }
 
 %button {
@@ -105,4 +113,23 @@
   border: 1px solid $grey-border;
   padding: calc(0.75rem - 1px); // compensating for border
   background-color: white;
+}
+
+.button-link {
+  @include preset-button;
+  cursor: pointer;
+  text-decoration: underline;
+  font: 400 1rem/1.75rem $font;
+  padding: 0.375rem 0;
+  color: $grey;
+
+  &:focus {
+    text-decoration: none;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }

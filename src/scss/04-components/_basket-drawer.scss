@@ -1,0 +1,69 @@
+.basket-drawer {
+  @include preset-animation;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  transform: translate3d(100%, 0, 0);
+  transition: transform 500ms ease-in-out;
+  max-width: 25rem;
+
+  &.active {
+    transform: translate3d(0, 0, 0);
+  }
+
+  .basket-drawer-header {
+    display: grid;
+    grid-template-columns: 2.5rem 1fr 2.5rem;
+    align-items: center;
+    padding: 1rem 0.75rem calc(1rem - 1px) 0.75rem; // for border to make height: 4.5rem;
+    border-bottom: 1px solid $grey-border;
+
+    .basket-drawer-header-title {
+      text-align: center;
+      grid-column: 2/3;
+    }
+
+    .button-circle {
+      grid-column: 3/4;
+    }
+  }
+
+  .basket-drawer-body {
+    height: calc(
+      100vh - 13.75rem
+    ); // 100vh - basket-drawer-header & basket-drawer-footer
+    overflow: auto;
+    padding: 1.5rem 1.25rem;
+
+    .basket-drawer-row {
+      display: grid;
+      grid-template-columns: 1fr 3.5rem;
+      gap: 2rem;
+      padding: 1rem 0;
+      border-top: 1px solid $grey-border;
+
+      .basket-drawer-row-name {
+        font: 500 1rem/1.75rem $font;
+        color: $grey-dark-super;
+      }
+
+      .basket-drawer-row-price {
+        font: 400 1rem/1.75rem $font;
+        color: $grey-dark-super;
+        text-align: right;
+      }
+    }
+  }
+
+  .basket-drawer-footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: calc(1.25rem - 1px) 1.25rem 1.25rem 1.25rem; // for border to make height: 9.25rem;
+    border-top: 1px solid $grey-border;
+  }
+}

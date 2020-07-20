@@ -1,0 +1,47 @@
+<div class="basket-drawer" id="basket-drawer">
+  <header class="basket-drawer-header">
+    <h4 class="basket-drawer-header-title">
+      Your order (1)
+    </h4>
+    <button class="button-circle grey" onclick="hideBasket()">
+      <div class="hidden">Hide Basket</div>
+      <span class="icon-close"></span>
+    </button>
+  </header>
+  <section class="basket-drawer-body">
+    <form method="post">
+      @@include('./basket-drawer-item.html')
+      <div class="basket-drawer-row">
+        <span class="basket-drawer-row-name">
+          Sub total (1 item)
+        </span>
+        <span class="basket-drawer-row-price">
+          £4.49
+        </span>
+      </div>
+      <div class="basket-drawer-row">
+        <span class="basket-drawer-row-name">
+          Delivery charge
+        </span>
+        <span class="basket-drawer-row-price">
+          £2.50
+        </span>
+      </div>
+      <div class="basket-drawer-row">
+        <span class="basket-drawer-row-name">
+          Total
+        </span>
+        <span class="basket-drawer-row-price">
+          £6.99
+        </span>
+      </div>
+    </form>
+  </section>
+  <footer class="basket-drawer-footer">
+    <a href="basket.html" class="button-secondary button-full-width"
+      >View basket</a
+    >
+    <a class="button-primary grey button-full-width">Minimum spend £12.00</a>
+  </footer>
+</div>
+<div class="overlay" id="basket-overlay" onclick="hideBasket()"></div>

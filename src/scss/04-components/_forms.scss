@@ -1,0 +1,27 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.counter {
+  display: grid;
+  gap: 0.25rem;
+  grid-template-columns: 2.5rem 1fr 2.5rem;
+  align-items: center;
+  border: 1px solid $grey-border;
+  width: max-content;
+  padding: calc(0.25rem - 1px) 0.25rem;
+  border-radius: 1.5rem;
+
+  .counter-number {
+    width: 1.5rem;
+    border: none;
+    padding: 0.5rem 0;
+    font: 500 1rem/1.5rem $font;
+    color: $grey-dark-super;
+    text-align: center;
+    -moz-appearance: textfield;
+    outline: none;
+  }
+}

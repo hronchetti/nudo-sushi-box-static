@@ -1,28 +1,28 @@
 @font-face {
-  font-family: 'Centra No 2';
-  src: url('../../fonts/CentraNo2-Book.woff2') format('woff2'),
-    url('../../fonts/CentraNo2-Book.woff') format('woff');
+  font-family: "Centra No 2";
+  src: url("../../fonts/CentraNo2-Book.woff2") format("woff2"),
+    url("../../fonts/CentraNo2-Book.woff") format("woff");
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Centra No 2';
-  src: url('../../fonts/CentraNo2-Medium.woff2') format('woff2'),
-    url('../../fonts/CentraNo2-Medium.woff') format('woff');
+  font-family: "Centra No 2";
+  src: url("../../fonts/CentraNo2-Medium.woff2") format("woff2"),
+    url("../../fonts/CentraNo2-Medium.woff") format("woff");
   font-weight: 500;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Centra No 2';
-  src: url('../../fonts/CentraNo2-Bold.woff2') format('woff2'),
-    url('../../fonts/CentraNo2-Bold.woff') format('woff');
+  font-family: "Centra No 2";
+  src: url("../../fonts/CentraNo2-Bold.woff2") format("woff2"),
+    url("../../fonts/CentraNo2-Bold.woff") format("woff");
   font-weight: 700;
   font-display: swap;
 }
 
-$font: 'Centra No 2', Arial, sans-serif;
+$font: "Centra No 2", Arial, sans-serif;
 
 body {
   font: 400 0.875rem/1.5rem $font;
@@ -46,7 +46,7 @@ h3 {
 }
 
 h4 {
-  font: 700 1.125rem/1.5rem $font;
+  font: 700 1.3125rem/1.75rem $font;
   color: $grey-dark-super;
 }
 
@@ -84,10 +84,5 @@ strong {
   h3 {
     font-size: 1.625rem;
     line-height: 2.125rem;
-  }
-
-  h4 {
-    font-size: calculate-rem(21px);
-    line-height: 1.75rem;
   }
 }

@@ -12,12 +12,16 @@
 
 // 03 UTILITIES - Re-usable classes using OOCSS logic
 @import "03-utilities/backgrounds-coloured";
+@import "03-utilities/hidden";
+@import "03-utilities/body-scroll-lock";
 @import "03-utilities/grids";
 @import "03-utilities/text-accessories";
 @import "03-utilities/wrappers";
 
 // 04 COMPONENTS - Re-usable classes for whole elements / elements groups
 @import "04-components/accounts";
+@import "04-components/basket-drawer";
+@import "04-components/basket-drawer-item";
 @import "04-components/buttons";
 @import "04-components/faqs";
 @import "04-components/footer";
@@ -26,4 +30,5 @@
 @import "04-components/join-mailing-list";
 @import "04-components/links";
 @import "04-components/nav";
+@import "04-components/overlay";
 @import "04-components/social-feed";
