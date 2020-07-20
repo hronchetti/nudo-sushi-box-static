@@ -16,11 +16,126 @@
   </head>
   <body>
     @@include('./components/nav.html')
-    <header class="header-landing-page">Test</header>
-    <main></main>
+    <section class="background-teal-light">
+      @@include('./components/header-landing-page.html')
+      <section>
+        <section class="wrapper section">
+          <h2>Sushi that's funky — in a good way!</h2>
+          @@include('./components/divider-teal.html')
+          @@include('./components/value-propositions.html')
+          <a href="our-stores.html" class="button-primary white"
+            >Find your nearest store</a
+          >
+        </section>
+      </section>
+    </section>
+    <main>
+      <section class="wrapper section">
+        <h2>This week's favourites</h2>
+        @@include('./components/divider-ginger-dark.html')
+        <div class="grid-4">
+          @@include('./components/product.html')
+          @@include('./components/product.html')
+          @@include('./components/product.html')
+          @@include('./components/product.html')
+        </div>
+        <a href="order-online.html" class="button-primary button-arrow"
+          >View all products</a
+        >
+      </section>
+      <section class="background-ginger-light">
+        <section class="wrapper section">
+          <h2>Love Nudo? Use @NudoSushiBox</h2>
+          @@include('./components/divider-teal.html')
+          <div class="grid-4">
+            <!-- Social media feed -->
+          </div>
+          <a
+            class="button-primary button-arrow grey-dark-super"
+            href="https://www.instagram.com/nudosushibox/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Follow @NudoSushiBox on Instagram</a
+          >
+        </section>
+      </section>
+      <section class="wrapper section left">
+        <h2>Where it all started</h2>
+        @@include('./components/divider-ginger-dark.html')
+        <p>
+          When it comes to sushi, it can sometimes be hard to find good quality
+          on the go. Our aim is to make sushi a regular, healthy treat as
+          opposed to an occasional luxury. We offer distinctive, unique and
+          beautifully prepared foods at affordable prices.
+        </p>
+        <p>
+          Ordering food from Nudo couldn't be easier. Simply visit one of our
+          growing number of stores to eat in, take away, or, order straight to
+          your door through our website.
+        </p>
+        <a href="about-us.html" class="button-primary ginger-light button-arrow"
+          >The Nudo story</a
+        >
+      </section>
+      <section class="wrapper section">
+        <h2>As seen on</h2>
+        @@include('./components/divider-ginger-dark.html')
+        <div class="flex-6">
+          <img
+            class="flex-item"
+            src="./images/logos/the-journal.png"
+            alt="The Journal newspaper logo"
+            title="The Journal newspaper"
+          />
+          <img
+            class="flex-item"
+            src="./images/logos/chronical-live.png"
+            alt="Chronical Live newspaper logo"
+            title="Chronical Live newspaper"
+          />
+          <img
+            class="flex-item"
+            src="./images/logos/living-north.png"
+            alt="Living North magazine logo"
+            title="Living North Magazine"
+          />
+          <img
+            class="flex-item"
+            src="./images/logos/happy-cow.png"
+            alt="Happy Cow app logo"
+            title="Happy Cow app"
+          />
+          <img
+            class="flex-item"
+            src="./images/logos/manchester-evening-news.png"
+            alt="Manchester Evening News logo"
+            title="Manchester Evening News"
+          />
+          <img
+            class="flex-item"
+            src="./images/logos/bdaily-news.png"
+            alt="BDaily News logo"
+            title="BDaily News"
+          />
+          <img
+            class="flex-item"
+            src="./images/logos/sunderland-echo.png"
+            alt="Sunderland Echo newspaper logo"
+            title="Sunderland Echo newspaper"
+          />
+          <img
+            class="flex-item"
+            src="./images/logos/north-east-times.png"
+            alt="North East Times newspaper logo"
+            title="North East Times newspaper"
+          />
+        </div>
+      </section>
+    </main>
     @@include('./components/join-mailing-list.html')
     @@include('./components/footer.html')
     <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
     <script src="js/index.min.js"></script>
   </body>
 </html>

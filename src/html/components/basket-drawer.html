@@ -10,13 +10,22 @@
   </header>
   <section class="basket-drawer-body">
     <form method="post">
-      @@include('./basket-drawer-item.html')
+      <!-- prettier-ignore -->
+      @@include('./basket-drawer-item.html', { 
+        "product": "Avocado lover",
+        "price": "£4.49", 
+      }) 
+      @@include('./basket-drawer-item.html', { 
+        "product": "Chicken Japanese Curry with Rice", 
+        "price": "£7.80", 
+      })
+      <!-- prettier-ignore -->
       <div class="basket-drawer-row">
         <span class="basket-drawer-row-name">
           Sub total (1 item)
         </span>
         <span class="basket-drawer-row-price">
-          £4.49
+          £12.29
         </span>
       </div>
       <div class="basket-drawer-row">
@@ -32,8 +41,13 @@
           Total
         </span>
         <span class="basket-drawer-row-price">
-          £6.99
+          £14.69
         </span>
+      </div>
+      <div class="basket-drawer-instructions">
+        <button class="button-link">
+          Add special instructions
+        </button>
       </div>
     </form>
   </section>
@@ -41,7 +55,7 @@
     <a href="basket.html" class="button-secondary button-full-width"
       >View basket</a
     >
-    <a class="button-primary grey button-full-width">Minimum spend £12.00</a>
+    <a class="button-primary button-full-width">Checkout for £14.69</a>
   </footer>
 </div>
 <div class="overlay" id="basket-overlay" onclick="hideBasket()"></div>

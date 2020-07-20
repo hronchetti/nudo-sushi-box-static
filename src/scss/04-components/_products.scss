@@ -1,0 +1,61 @@
+.product {
+  .product-photo {
+    padding: 0 0 100% 0;
+    background-color: $ginger-light;
+  }
+
+  .product-details {
+    display: grid;
+    grid-template-columns: 1fr 3.25rem;
+    margin: 0.75rem 0 0.5rem;
+
+    .product-price {
+      font-size: 1rem;
+      line-height: 1.75rem;
+      color: $grey-dark-super;
+      text-align: right;
+    }
+  }
+
+  .product-nutrition {
+    margin-bottom: 1rem;
+    color: $grey-dark-super;
+    @include flexJustifyStart;
+    line-height: 1.5rem;
+
+    span {
+      display: block;
+      margin-right: 0.125rem;
+
+      &.product-nutrition-kcal {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .product-controls {
+    display: grid;
+    grid-template-columns: 7.625rem 1fr;
+    gap: 1rem;
+
+    .button-secondary {
+      width: 100%;
+
+      .product-control-large-only {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 1340px) {
+  .product {
+    .product-controls {
+      .button-secondary {
+        .product-control-large-only {
+          display: inline;
+        }
+      }
+    }
+  }
+}

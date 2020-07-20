@@ -10,7 +10,7 @@
   z-index: 998;
   opacity: 0;
   pointer-events: none;
-  transition: 250ms opacity ease-in;
+  transition: 300ms opacity ease-in-out;
 
   &.active {
     opacity: 0.2;

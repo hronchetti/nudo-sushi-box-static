@@ -1,0 +1,33 @@
+.value-propositions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+
+  .value-proposition {
+    text-align: center;
+
+    .value-proposition-illustration {
+      margin: 0 auto;
+    }
+
+    h3 {
+      margin: 0.75rem 0;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .value-propositions {
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 960px) {
+  .value-propositions {
+    grid-template-columns: 15rem 15rem 15rem;
+    gap: 10%;
+  }
+}

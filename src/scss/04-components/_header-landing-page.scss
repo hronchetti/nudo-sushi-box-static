@@ -1,0 +1,26 @@
+.header-landing-page {
+  position: relative;
+
+  .header-landing-page-image {
+    background-color: $grey-dark-super;
+    height: 32rem;
+    overflow: hidden;
+
+    img {
+      opacity: 0.8;
+      width: 100%;
+    }
+  }
+
+  .header-landing-page-box {
+    background-color: white;
+    border-radius: 0.25rem;
+    max-width: 40rem;
+    margin: 0 auto;
+    text-align: center;
+
+    .button-primary {
+      margin: 0 auto;
+    }
+  }
+}

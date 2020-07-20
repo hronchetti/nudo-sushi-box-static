@@ -4,15 +4,21 @@ const getFooterYear = () => {
   ).innerHTML = new Date().getFullYear()
 }
 
-document.addEventListener("DOMContentLoaded", getFooterYear)
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = lozad()
+  observer.observe()
+  getFooterYear()
+})
 
 const showMobileNav = () => {
   document.getElementById("nav-mobile").classList.add("active")
+  document.getElementById("nav-mobile-overlay").classList.add("active")
   lockBodyScroll()
 }
 
 const hideMobileNav = () => {
   document.getElementById("nav-mobile").classList.remove("active")
+  document.getElementById("nav-mobile-overlay").classList.remove("active")
   unlockBodyScroll()
 }
 
