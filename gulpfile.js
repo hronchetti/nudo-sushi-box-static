@@ -14,13 +14,14 @@ const distPath = "./dist/"
  * ----------------------------------------------------------------------
  */
 
-let { src, dest, watch, series } = require("gulp")
-let browserSync = require("browser-sync")
-let rename = require("gulp-rename")
-let sass = require("gulp-sass")
-let uglify = require("gulp-uglify")
-let fileinclude = require("gulp-file-include")
-let del = require("del")
+const { src, dest, watch, series } = require("gulp")
+const browserSync = require("browser-sync")
+const rename = require("gulp-rename")
+const sass = require("gulp-sass")
+const uglify = require("gulp-uglify")
+const fileinclude = require("gulp-file-include")
+const del = require("del")
+const babel = require("gulp-babel")
 
 /**
  * ----------------------------------------------------------------------
@@ -36,7 +37,12 @@ const buildScss = () => {
 }
 
 const buildJS = () => {
-  return src(srcPath + "js/**/*.js")
+  return src(srcPath + "js/index.js")
+    .pipe(
+      babel({
+        presets: ["@babel/env"],
+      })
+    )
     .pipe(uglify())
     .pipe(rename({ suffix: ".min" }))
     .pipe(dest(distPath + "js/"))
