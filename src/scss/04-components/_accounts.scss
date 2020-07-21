@@ -1,0 +1,272 @@
+.accounts-header-centered {
+  text-align: center;
+  margin: 1rem 1.25rem 0.25rem;
+  max-width: 25rem;
+
+  p {
+    margin: 1rem auto 0;
+    max-width: 30rem;
+  }
+}
+
+.accounts-form-centered {
+  max-width: 20rem;
+  margin: 0 auto;
+  padding: 0 1.25rem 4rem;
+
+  .accounts-form-centered-buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+
+.accounts-header {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  @include flexSpaceBetween;
+  align-items: center;
+
+  .button-link {
+    font-size: 0.875rem;
+  }
+
+  .accounts-header-links {
+    width: 100%;
+    @include flexSpaceBetween;
+    align-items: center;
+  }
+
+  .accounts-header-primary {
+    width: 100%;
+    align-items: center;
+    row-gap: 0.75rem;
+  }
+}
+
+.accounts {
+  padding-top: 0;
+
+  .order-table {
+    order: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    .order-table-heading {
+      font: 500 1rem/1.75rem $font;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid $grey-border;
+    }
+
+    .order-table-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      &.order-table-row-indented {
+        .order-table-row-indented-desktop {
+          display: none;
+        }
+      }
+    }
+
+    .order-table-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+
+      h6,
+      span {
+        display: block;
+        border-bottom: 1px solid $grey-border;
+        padding: 0.5rem 0;
+
+        &:last-of-type {
+          border: none;
+        }
+
+        .order-rable-row-order-number {
+          color: #676970;
+          text-decoration: underline;
+
+          &:focus {
+            text-decoration: none;
+          }
+
+          @media (hover: hover) {
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+      h6 {
+        padding-right: 1rem;
+      }
+    }
+
+    .order-table-header {
+      display: none;
+
+      h6 {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .accounts-sidebar {
+    order: 1;
+    color: $grey-dark-super;
+
+    .accounts-sidebar-item {
+      margin-top: 1rem;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+
+      .accounts-sidebar-item-heading {
+        font: 500 1rem/1.75rem $font;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid $grey-border;
+      }
+
+      .accounts-sidebar-item-details {
+        margin: 1rem 0 0 0;
+
+        p {
+          margin-top: 0.75rem;
+        }
+      }
+
+      .button-secondary {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .accounts-header {
+    .accounts-header-primary {
+      .accounts-header-primary-button {
+        @include flexJustifyEnd;
+      }
+    }
+  }
+  .accounts {
+    .order-table {
+      order: 1;
+
+      .order-table-heading {
+        display: none;
+      }
+    }
+
+    .accounts-sidebar {
+      order: 2;
+
+      .accounts-sidebar-item {
+        .button-secondary {
+          margin-top: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .accounts-header-centered {
+    margin: 2rem auto 1.5rem;
+  }
+
+  .accounts-form-centered {
+    padding: 0 0 6rem 0;
+  }
+
+  .accounts-header {
+    padding-top: 2rem;
+    padding-bottom: 2.5rem;
+
+    .button-link {
+      font-size: 1rem;
+    }
+
+    .accounts-header-links {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: 1100px) {
+  .accounts-header {
+    .accounts-header-primary {
+      .h2 {
+        grid-column: 1/4;
+      }
+    }
+  }
+
+  .accounts {
+    .order-table {
+      grid-column: 1/4;
+      display: block;
+
+      .order-table-header {
+        display: grid;
+
+        .button-link {
+          font-size: 1rem;
+        }
+      }
+
+      .order-table-row {
+        grid-template-columns: 1fr;
+        border-top: 1px solid $grey-border;
+
+        &.order-table-row-indented {
+          .order-table-row-indented-value {
+            grid-column: 4/5;
+            grid-row: 1;
+          }
+
+          .order-table-row-indented-desktop {
+            grid-column: 5/6;
+            display: block;
+          }
+        }
+
+        .order-table-row-header {
+          display: none;
+        }
+      }
+
+      .order-table-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 1.5rem;
+        grid-auto-rows: min-content;
+
+        h6 {
+          border: none;
+          padding: 0 0 0.75rem;
+        }
+
+        span {
+          padding: 0.875rem 0;
+          border: none;
+        }
+      }
+    }
+
+    .accounts-sidebar {
+      .accounts-sidebar-item {
+        margin-top: 2rem;
+
+        .accounts-sidebar-item-heading {
+          font: 500 1rem/1.5rem $font;
+          padding: 0 0 calc(0.75rem - 1px); // for border to line up with order table
+        }
+      }
+    }
+  }
+}

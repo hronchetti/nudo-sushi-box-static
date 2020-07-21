@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="title" content="Lorem ipsum dolor sit." />
+    <meta name="description" content="Lorem ipsum dolor sit." />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/main.min.css" />
+
+    <!-- Title -->
+    <title>Order #1234</title>
+  </head>
+  <body>
+    @@include('./components/nav.html')
+    <header class="wrapper accounts-header">
+      <div class="accounts-header-links">
+        <a href="accounts-your-account.html" class="button-link">Back</a>
+        <form method="post">
+          <button type="submit" class="button-link">Log out</button>
+        </form>
+      </div>
+      <div class="grid-4 accounts-header-primary">
+        <h1 class="h2">Order #1234</h1>
+        <span>Placed: 6th July, 2020 at 10:21</span>
+      </div>
+    </header>
+    <main class="wrapper grid-4 accounts">
+      <div class="order-table">
+        <h4 class="order-table-heading">Order details</h4>
+        <!-- Head -->
+        <header class="order-table-grid order-table-header">
+          <h6>Item</h6>
+          <h6>SKU</h6>
+          <h6>Price</h6>
+          <h6>Quantity</h6>
+          <h6>Total</h6>
+        </header>
+        <!-- Head end -->
+        <!-- Row -->
+        <section class="order-table-row">
+          <div class="order-table-grid order-table-row-header">
+            <h6>Item</h6>
+            <h6>SKU</h6>
+            <h6>Price</h6>
+            <h6>Quantity</h6>
+            <h6>Total</h6>
+          </div>
+          <div class="order-table-grid">
+            <span class="text-bold">Avocado Lover</span>
+            <span>M-LC-BL-G-i678-V1</span>
+            <span>£4.49</span>
+            <span>2</span>
+            <span>£8.95</span>
+          </div>
+        </section>
+        <!-- Row end -->
+        <!-- Row -->
+        <section class="order-table-row">
+          <div class="order-table-grid order-table-row-header">
+            <h6>Item</h6>
+            <h6>SKU</h6>
+            <h6>Price</h6>
+            <h6>Quantity</h6>
+            <h6>Total</h6>
+          </div>
+          <div class="order-table-grid">
+            <span class="text-bold">Salmon &amp; Tuna Nigiri</span>
+            <span>U-DA-AO-Wj601-V1</span>
+            <span>£5.01</span>
+            <span>2</span>
+            <span>£10.02</span>
+          </div>
+        </section>
+        <!-- Row end -->
+        <!-- Row -->
+        <section class="order-table-row order-table-row-indented">
+          <div class="order-table-grid order-table-row-header">
+            <h6>Sub total</h6>
+          </div>
+          <div class="order-table-grid">
+            <span class="order-table-row-indented-desktop">Sub total</span>
+            <span class="order-table-row-indented-value">£19.00</span>
+          </div>
+        </section>
+        <!-- Row end -->
+        <!-- Row -->
+        <section class="order-table-row order-table-row-indented">
+          <div class="order-table-grid order-table-row-header">
+            <h6>Discount</h6>
+          </div>
+          <div class="order-table-grid">
+            <span class="order-table-row-indented-desktop">Discount</span>
+            <span class="order-table-row-indented-value">£0.00</span>
+          </div>
+        </section>
+        <!-- Row end -->
+        <!-- Row -->
+        <section class="order-table-row order-table-row-indented">
+          <div class="order-table-grid order-table-row-header">
+            <h6>Delivery</h6>
+          </div>
+          <div class="order-table-grid">
+            <span class="order-table-row-indented-desktop">Delivery</span>
+            <span class="order-table-row-indented-value">£2.50</span>
+          </div>
+        </section>
+        <!-- Row end -->
+        <!-- Row -->
+        <section class="order-table-row order-table-row-indented">
+          <div class="order-table-grid order-table-row-header">
+            <h6>Total</h6>
+          </div>
+          <div class="order-table-grid">
+            <span class="order-table-row-indented-desktop text-bold"
+              >Total</span
+            >
+            <span class="text-bold order-table-row-indented-value">£21.50</span>
+          </div>
+        </section>
+        <!-- Row end -->
+      </div>
+      <div class="accounts-sidebar">
+        <section class="accounts-sidebar-item">
+          <h4 class="accounts-sidebar-item-heading">Delivery address</h4>
+          <div class="accounts-sidebar-item-details">
+            <p class="text-bold">
+              Harry Ronchetti
+            </p>
+            <p>
+              88 Whitefield Terrace,<br />
+              Heaton,<br />
+              Newcastle upon-Tyne<br />
+              NE6 5SR<br />
+            </p>
+            <p>harryronchetti@gmail.com</p>
+            <p>Delivery status: Delivered</p>
+          </div>
+        </section>
+        <section class="accounts-sidebar-item">
+          <h4 class="accounts-sidebar-item-heading">Billing address</h4>
+          <div class="accounts-sidebar-item-details">
+            <p class="text-bold">
+              Harry Ronchetti
+            </p>
+            <p>
+              88 Whitefield Terrace,<br />
+              Heaton,<br />
+              Newcastle upon-Tyne<br />
+              NE6 5SR<br />
+            </p>
+            <p>harryronchetti@gmail.com</p>
+            <p>Payment status: Authorised</p>
+          </div>
+        </section>
+      </div>
+    </main>
+    @@include('./components/join-mailing-list.html')
+    @@include('./components/footer.html')
+    <!-- Scripts -->
+    <script src="js/index.min.js"></script>
+  </body>
+</html>

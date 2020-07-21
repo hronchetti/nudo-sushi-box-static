@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="title" content="Lorem ipsum dolor sit." />
+    <meta name="description" content="Lorem ipsum dolor sit." />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/main.min.css" />
+
+    <!-- Title -->
+    <title>Your addresses</title>
+  </head>
+  <body>
+    @@include('./components/nav.html')
+    <header class="wrapper accounts-header">
+      <div class="accounts-header-links">
+        <a href="accounts-your-account.html" class="button-link">Back</a>
+        <form method="post">
+          <button type="submit" class="button-link">Log out</button>
+        </form>
+      </div>
+      <div class="grid-4 accounts-header-primary">
+        <h1 class="h2">Your addresses</h1>
+        <div class="accounts-header-primary-button">
+          <button onclick="showNewAddressForm()" class="button-secondary">
+            Add new address
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="wrapper grid-4 accounts">
+      <form id="accounts-new-address-form">
+        <h4>New address</h4>
+        <div>
+          <div class="input-wrapper">
+            <label for="first-name">First name</label>
+            <input
+              name="first-name"
+              id="first-name"
+              type="text"
+              placeholder="Daniel"
+            />
+            <span class="input-error"></span>
+          </div>
+          <div class="input-wrapper">
+            <label for="last-name">Last name</label>
+            <input
+              name="last-name"
+              id="last-name"
+              type="text"
+              placeholder="LaRusso"
+            />
+            <span class="input-error"></span>
+          </div>
+          <div class="input-wrapper">
+            <label for="last-name">Company</label>
+            <input name="company" id="company" type="text" />
+            <span class="input-error"></span>
+          </div>
+          <div class="input-wrapper">
+            <label for="address-line-1">Address line 1</label>
+            <input name="address-line-1" id="address-line-1" type="text" />
+            <span class="input-error"></span>
+          </div>
+          <div class="input-wrapper">
+            <label for="address-line-2">Address line 2</label>
+            <input name="address-line-2" id="address-line-2" type="text" />
+            <span class="input-error"></span>
+          </div>
+          <div class="input-wrapper">
+            <label for="city">City</label>
+            <input name="city" id="city" type="text" />
+            <span class="input-error"></span>
+          </div>
+          <div class="input-wrapper">
+            <label for="postcode">Postcode</label>
+            <input name="postcode" id="postcode" type="text" />
+            <span class="input-error"></span>
+          </div>
+          <div class="input-wrapper">
+            <label for="country">Country</label>
+            <input name="country" id="country" type="text" />
+            <span class="input-error"></span>
+          </div>
+          <div class="input-wrapper">
+            <label for="phone">Phone</label>
+            <input name="phone" id="phone" type="number" />
+            <span class="input-error"></span>
+          </div>
+          <div class="checkbox-wrapper">
+            <input
+              name="default-address"
+              id="default-address"
+              type="checkbox"
+            />
+            <label for="default-address">Set as default address</label>
+          </div>
+          <div>
+            <button type="submit" class="button-primary">Save address</button>
+            <button
+              onclick="hideNewAddressForm()"
+              type="button"
+              class="button-secondary"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </form>
+      <div class="accounts-sidebar">
+        <section class="accounts-sidebar-item">
+          <div class="accounts-sidebar-item-details">
+            <p class="text-bold">
+              88 Whitefield Terrace (Default address)
+            </p>
+            <p>
+              Harry Ronchetti <br />
+              88 Whitefield Terrace,<br />
+              Heaton,<br />
+              Newcastle upon-Tyne<br />
+              NE6 5SR<br />
+            </p>
+            <p>07546258395</p>
+          </div>
+        </section>
+      </div>
+    </main>
+    @@include('./components/join-mailing-list.html')
+    @@include('./components/footer.html')
+    <!-- Scripts -->
+    <script src="js/index.min.js"></script>
+    <script src="js/accounts-new-address.min.js"></script>
+  </body>
+</html>

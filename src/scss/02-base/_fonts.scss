@@ -35,7 +35,8 @@ h1 {
   letter-spacing: -0.25px;
 }
 
-h2 {
+h2,
+.h2 {
   font: 700 1.5rem/2rem $font;
   color: $grey-dark-super;
 }
@@ -54,6 +55,11 @@ h5 {
   font: 400 1.125rem/1.875rem $font;
 }
 
+h6 {
+  font: 500 0.875rem/1.5rem $font;
+  color: $grey-dark-super;
+}
+
 a {
   text-decoration: none;
 }
@@ -63,15 +69,24 @@ strong {
   font-weight: 700;
 }
 
+p {
+  margin-top: 0.75rem;
+}
+
 @media (min-width: 800px) {
   body {
     font-size: 1rem;
     line-height: 1.75rem;
   }
 
-  h2 {
+  h2,
+  .h2 {
     font-size: 1.875rem;
     line-height: 2.5rem;
+  }
+
+  p {
+    margin-top: 1.5rem;
   }
 }
 
@@ -81,7 +96,8 @@ strong {
     line-height: 3.75rem;
   }
 
-  h2 {
+  h2,
+  .h2 {
     font-size: 2.125rem;
     line-height: 3rem;
   }
@@ -89,5 +105,10 @@ strong {
   h3 {
     font-size: 1.625rem;
     line-height: 2.125rem;
+  }
+
+  h6 {
+    font: 500 1rem/1.5rem $font;
+    color: $grey-dark-super;
   }
 }

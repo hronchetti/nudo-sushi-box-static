@@ -1,3 +1,10 @@
+label {
+  display: block;
+  font: 500 1rem/1.5rem $font;
+  color: $grey-dark-super;
+  margin-bottom: 0.5rem;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -11,7 +18,7 @@ input::-webkit-inner-spin-button {
   align-items: center;
   border: 1px solid $grey-border;
   width: max-content;
-  padding: calc(0.25rem - 1px) 0.25rem;
+  padding: calc(0.25rem - 1px) 0.25rem; // for border
   border-radius: 1.5rem;
 
   .counter-number {
@@ -23,5 +30,47 @@ input::-webkit-inner-spin-button {
     text-align: center;
     -moz-appearance: textfield;
     outline: none;
+  }
+}
+
+.input-wrapper {
+  input {
+    font: 400 1rem/1.5rem $font;
+    border: 1px solid $grey-border;
+    border-radius: 0.25rem;
+    background-color: white;
+    color: $grey-dark-super;
+    padding: calc(0.75rem - 1px) 1rem; // for border
+    width: 100%;
+    outline: none;
+
+    &:focus {
+      outline: none;
+      border-color: $teal;
+    }
+
+    &.error {
+      border-color: $red;
+    }
+  }
+
+  .input-error {
+    font: 400 0.9375rem/1.5rem $font;
+    display: block;
+    min-height: 2rem;
+    color: $red-dark;
+    padding: 0.25rem 0;
+  }
+}
+
+.checkbox-wrapper {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+
+  input {
+  }
+
+  label {
+    font-weight: 400;
   }
 }

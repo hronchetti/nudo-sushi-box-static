@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="title" content="Lorem ipsum dolor sit." />
+    <meta name="description" content="Lorem ipsum dolor sit." />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/main.min.css" />
+
+    <!-- Title -->
+    <title>Log in to your account</title>
+  </head>
+  <body>
+    @@include('./components/nav.html')
+    <header class="accounts-header-centered">
+      <h1 class="h2">Log in</h1>
+    </header>
+    <main>
+      <form class="accounts-form-centered">
+        <div class="input-wrapper">
+          <label for="email">Email</label>
+          <input
+            name="email"
+            id="email"
+            type="email"
+            placeholder="daniel.larusso@karatekid.net"
+          />
+          <span class="input-error"></span>
+        </div>
+        <div class="input-wrapper">
+          <label for="password">Password</label>
+          <input
+            name="password"
+            id="password"
+            type="password"
+            placeholder="••••••••••"
+          />
+          <span class="input-error"></span>
+        </div>
+        <div class="accounts-form-centered-buttons">
+          <button type="submit" class="button-primary button-full-width">
+            Log in
+          </button>
+          <a
+            href="accounts-create-account.html"
+            class="button-secondary button-full-width"
+            >Create account</a
+          >
+          <a
+            href="accounts-forgotten-password.html"
+            class="button-link button-link-centered"
+            >Forgotten your password?</a
+          >
+        </div>
+      </form>
+    </main>
+    @@include('./components/join-mailing-list.html')
+    @@include('./components/footer.html')
+    <!-- Scripts -->
+    <script src="js/index.min.js"></script>
+  </body>
+</html>

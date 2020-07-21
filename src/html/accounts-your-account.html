@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="title" content="Lorem ipsum dolor sit." />
+    <meta name="description" content="Lorem ipsum dolor sit." />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/main.min.css" />
+
+    <!-- Title -->
+    <title>Your account</title>
+  </head>
+  <body>
+    @@include('./components/nav.html')
+    <header class="wrapper accounts-header">
+      <h1 class="h2">Your account</h1>
+      <form method="post">
+        <button type="submit" class="button-link">Log out</button>
+      </form>
+    </header>
+    <main class="wrapper grid-4 accounts">
+      <div class="order-table">
+        <h4 class="order-table-heading">Your orders</h4>
+        <!-- Head -->
+        <header class="order-table-grid order-table-header">
+          <h6>Order</h6>
+          <h6>Date</h6>
+          <h6>Payment status</h6>
+          <h6>Delivery status</h6>
+          <h6>Total</h6>
+        </header>
+        <!-- Head end -->
+        <!-- Row -->
+        <section class="order-table-row">
+          <div class="order-table-grid order-table-row-header">
+            <h6>Order</h6>
+            <h6>Date</h6>
+            <h6>Payment status</h6>
+            <h6>Delivery status</h6>
+            <h6>Total</h6>
+          </div>
+          <div class="order-table-grid">
+            <span
+              ><a
+                class="order-rable-row-order-number"
+                href="accounts-view-order.html"
+                >#1234</a
+              ></span
+            >
+            <span>06/07/2020</span>
+            <span>Authorised</span>
+            <span>Fulfilled</span>
+            <span>£21.95</span>
+          </div>
+        </section>
+        <!-- Row end -->
+        <!-- Row -->
+        <section class="order-table-row">
+          <div class="order-table-grid order-table-row-header">
+            <h6>Order</h6>
+            <h6>Date</h6>
+            <h6>Payment status</h6>
+            <h6>Delivery status</h6>
+            <h6>Total</h6>
+          </div>
+          <div class="order-table-grid">
+            <span
+              ><a
+                class="order-rable-row-order-number"
+                href="accounts-view-order.html"
+                >#1234</a
+              ></span
+            >
+            <span>06/07/2020</span>
+            <span>Authorised</span>
+            <span>Fulfilled</span>
+            <span>£21.95</span>
+          </div>
+        </section>
+        <!-- Row end -->
+        <!-- Row -->
+        <section class="order-table-row">
+          <div class="order-table-grid order-table-row-header">
+            <h6>Order</h6>
+            <h6>Date</h6>
+            <h6>Payment status</h6>
+            <h6>Delivery status</h6>
+            <h6>Total</h6>
+          </div>
+          <div class="order-table-grid">
+            <span
+              ><a
+                class="order-rable-row-order-number"
+                href="accounts-view-order.html"
+                >#1234</a
+              ></span
+            >
+            <span>06/07/2020</span>
+            <span>Authorised</span>
+            <span>Fulfilled</span>
+            <span>£21.95</span>
+          </div>
+        </section>
+        <!-- Row end -->
+      </div>
+      <div class="accounts-sidebar">
+        <section class="accounts-sidebar-item">
+          <h4 class="accounts-sidebar-item-heading">Default address</h4>
+          <div class="accounts-sidebar-item-details">
+            <p class="text-bold">
+              Harry Ronchetti
+            </p>
+            <p>
+              88 Whitefield Terrace,<br />
+              Heaton,<br />
+              Newcastle upon-Tyne<br />
+              NE6 5SR<br />
+            </p>
+            <p>harryronchetti@gmail.com</p>
+          </div>
+          <a href="accounts-manage-addresses.html" class="button-secondary"
+            >Manage addresses (1)</a
+          >
+        </section>
+      </div>
+    </main>
+    @@include('./components/join-mailing-list.html')
+    @@include('./components/footer.html')
+    <!-- Scripts -->
+    <script src="js/index.min.js"></script>
+  </body>
+</html>

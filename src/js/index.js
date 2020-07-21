@@ -5,8 +5,6 @@ const getFooterYear = () => {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const observer = lozad()
-  observer.observe()
   getFooterYear()
 })
 

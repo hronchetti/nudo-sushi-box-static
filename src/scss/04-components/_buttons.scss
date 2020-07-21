@@ -82,7 +82,7 @@
   }
 
   &.button-full-width {
-    width: auto;
+    width: 100%;
     text-align: center;
   }
 }
@@ -137,6 +137,7 @@
   padding: 0.375rem 0;
   color: $grey;
   display: block;
+  width: max-content;
 
   &:focus {
     text-decoration: none;
@@ -146,5 +147,9 @@
     &:hover {
       text-decoration: none;
     }
+  }
+
+  &.button-link-centered {
+    margin: 0 auto;
   }
 }

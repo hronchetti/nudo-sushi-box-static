@@ -37,7 +37,7 @@ const buildScss = () => {
 }
 
 const buildJS = () => {
-  return src(srcPath + "js/index.js")
+  return src(srcPath + "js/*.js")
     .pipe(
       babel({
         presets: ["@babel/env"],
