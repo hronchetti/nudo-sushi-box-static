@@ -1,8 +1,13 @@
 label {
-  display: block;
+  @include flexSpaceBetween;
   font: 500 1rem/1.5rem $font;
   color: $grey-dark-super;
   margin-bottom: 0.5rem;
+
+  .optional-text {
+    font: 400 1rem/1.5rem $font;
+    color: $grey-light;
+  }
 }
 
 input::-webkit-outer-spin-button,
@@ -66,11 +71,68 @@ input::-webkit-inner-spin-button {
 .checkbox-wrapper {
   display: grid;
   grid-template-columns: 2.5rem 1fr;
+  position: relative;
+  padding: 0.5rem 0;
+  width: max-content;
 
   input {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+    &:focus + .checkbox {
+      border: 1px solid $teal;
+      background-color: $grey-border;
+    }
+
+    @media (hover: hover) {
+      &:hover + .checkbox {
+        border: 1px solid $teal;
+        background-color: $grey-border;
+      }
+    }
+
+    &:checked + .checkbox {
+      border: 1px solid $teal;
+      background-color: $teal;
+
+      &:after {
+        opacity: 1;
+      }
+    }
+  }
+
+  .checkbox {
+    pointer-events: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.125rem;
+    border: 1px solid $grey-border;
+    position: relative;
+    background-color: white;
+    transition: background-color 250ms ease-in-out;
+
+    &:after {
+      font-family: "icons" !important;
+      font-size: 1.5rem;
+      content: "\e91a";
+      display: block;
+      height: max-content;
+      position: absolute;
+      left: -1px;
+      top: -2px;
+      height: 1.5rem;
+      color: $grey-dark-super;
+      opacity: 0;
+    }
   }
 
   label {
+    pointer-events: none;
     font-weight: 400;
+    margin-bottom: 0;
   }
 }
