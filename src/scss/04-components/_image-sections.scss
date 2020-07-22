@@ -1,0 +1,49 @@
+.image-section {
+  .image-section-content {
+    max-width: 26.25rem; // enforcing max-characters per line for better web-reading
+    margin: 0 auto;
+
+    .image-section-content-buttons {
+      margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+  }
+
+  .image-section-image {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1100px) {
+  .image-section {
+    &.image-section-first {
+      padding-top: 4.5rem;
+    }
+
+    .image-section-content {
+      max-width: none;
+      margin: 0;
+      padding-left: 8.33%;
+
+      p {
+        max-width: 26.25rem; // enforcing max-characters per line for better web-reading
+      }
+    }
+
+    .image-section-image {
+      &.no-padding {
+        padding-left: 0;
+      }
+
+      padding-left: 8.33%;
+    }
+  }
+}
+
+@media (min-width: 1344px) {
+  .image-section {
+    padding: 6rem 0;
+  }
+}
