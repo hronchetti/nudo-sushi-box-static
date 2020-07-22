@@ -82,14 +82,28 @@
       <section class="wrapper grid-2 image-section">
         <div class="image-section-content">
           <h2>Delivery costs &amp; zones</h2>
-          <p>
-            Our North East kitchen deliveres Mon - Sun, 9am - 8:30pm to the
-            postcodes shown below:
-          </p>
-          <p>
-            The minimum order value accepted is £12.00 (Free delivery for orders
-            above £25).
-          </p>
+          <div class="tabs">
+            <button
+              type="button"
+              class="tab active"
+              onclick="setTabs('north-east')"
+            >
+              North East
+            </button>
+            <button type="button" class="tab" onclick="setTabs('manchester')">
+              Manchester
+            </button>
+          </div>
+          <div class="tab-content">
+            <p>
+              Our North East kitchen deliveres Mon - Sun, 9am - 8:30pm to the
+              postcodes shown below:
+            </p>
+            <p>
+              The minimum order value accepted is £12.00 (Free delivery for
+              orders above £25).
+            </p>
+          </div>
         </div>
         <img
           class="image-section-image"
@@ -117,10 +131,31 @@
           </p>
         </div>
       </section>
+      <section class="wrapper grid-2 image-section">
+        <div class="image-section-content">
+          <h2>Sustainable delivery</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        <img
+          class="image-section-image"
+          src="./images/placeholder.png"
+          alt="placeholder image"
+          title="placeholder"
+        />
+      </section>
     </main>
     @@include('./components/join-mailing-list.html')
     @@include('./components/footer.html')
     <!-- Scripts -->
+    <script src="js/delivery-information-tabs.min.js"></script>
     <script src="js/index.min.js"></script>
   </body>
 </html>

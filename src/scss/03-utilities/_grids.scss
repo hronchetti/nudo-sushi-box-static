@@ -38,6 +38,10 @@
     gap: 4rem;
     align-items: center;
   }
+
+  .grid-4 {
+    gap: 3rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -55,6 +59,5 @@
   .grid-4 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 3rem;
   }
 }

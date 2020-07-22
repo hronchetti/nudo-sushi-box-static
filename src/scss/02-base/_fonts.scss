@@ -35,6 +35,9 @@ h1 {
   letter-spacing: -0.25px;
 }
 
+/* class over-rides for headings (e.g. .h2) are to keep heading order semantically correct
+   (see: https://web.dev/heading-order/) and still match design font sizes etc */
+
 h2,
 .h2 {
   font: 700 1.5rem/2rem $font;

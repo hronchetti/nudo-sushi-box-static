@@ -1,0 +1,38 @@
+.tabs {
+  @include flexJustifyStart;
+
+  .tab {
+    @include preset-button;
+    @include preset-animation;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    font: 500 1rem/1.5rem $font;
+    filter: brightness(100%);
+    background-color: white;
+    display: block;
+    padding: 0.5rem 1rem;
+    color: $grey-dark-super;
+    border-radius: 1.25rem;
+    transition: filter 250ms ease-in;
+    width: max-content;
+    border: 1px solid $grey-border;
+
+    &:focus {
+      filter: brightness(90%);
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        filter: brightness(90%);
+      }
+    }
+
+    &.active {
+      border: 1px solid $teal;
+      background-color: $teal;
+    }
+  }
+}
+
+.tab-content {
+}
