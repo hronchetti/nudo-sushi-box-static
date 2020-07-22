@@ -1,4 +1,14 @@
+.grid-full-width {
+  grid-column: 1/-1;
+}
+
 .grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.grid-3 {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
@@ -11,6 +21,10 @@
 }
 
 @media (min-width: 600px) {
+  .grid-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .grid-4 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -23,6 +37,13 @@
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-3 {
+    gap: 3rem;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
