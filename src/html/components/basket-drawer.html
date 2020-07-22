@@ -3,22 +3,27 @@
     <h4 class="basket-drawer-header-title">
       Your order (1)
     </h4>
-    <button class="button-circle grey" onclick="hideBasket()">
-      <div class="hidden">Hide Basket</div>
+    <button
+      class="button-circle grey"
+      onclick="hideBasket()"
+      aria-label="Hide Basket"
+    >
       <span class="icon-close"></span>
     </button>
   </header>
   <section class="basket-drawer-body">
     <form method="post">
-      <!-- prettier-ignore -->
-      @@include('./basket-drawer-item.html', { 
+      <ul>
+        <!-- prettier-ignore -->
+        @@include('./basket-drawer-item.html', { 
         "product": "Avocado lover",
         "price": "£4.49", 
-      }) 
-      @@include('./basket-drawer-item.html', { 
-        "product": "Chicken Japanese Curry with Rice", 
-        "price": "£7.80", 
-      })
+        }) 
+        @@include('./basket-drawer-item.html', { 
+          "product": "Chicken Japanese Curry with Rice", 
+          "price": "£7.80", 
+        })
+      </ul>
       <!-- prettier-ignore -->
       <div class="basket-drawer-row">
         <span class="basket-drawer-row-name">

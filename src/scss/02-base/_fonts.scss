@@ -41,21 +41,25 @@ h2,
   color: $grey-dark-super;
 }
 
-h3 {
+h3,
+.h3 {
   font: 700 1.375rem/1.875rem $font;
   color: $grey-dark-super;
 }
 
-h4 {
+h4,
+.h4 {
   font: 700 1.3125rem/1.75rem $font;
   color: $grey-dark-super;
 }
 
-h5 {
+h5,
+.h5 {
   font: 400 1.125rem/1.875rem $font;
 }
 
-h6 {
+h6,
+.h6 {
   font: 500 0.875rem/1.5rem $font;
   color: $grey-dark-super;
 }
@@ -102,12 +106,14 @@ p {
     line-height: 3rem;
   }
 
-  h3 {
+  h3,
+  .h3 {
     font-size: 1.625rem;
     line-height: 2.125rem;
   }
 
-  h6 {
+  h6,
+  .h6 {
     font: 500 1rem/1.5rem $font;
     color: $grey-dark-super;
   }

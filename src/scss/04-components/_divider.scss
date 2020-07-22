@@ -1,0 +1,11 @@
+.divider {
+  width: 7.5rem;
+  height: 0.5625rem;
+}
+
+@media (min-width: 800px) {
+  .divider {
+    width: 10rem;
+    height: 0.75rem;
+  }
+}

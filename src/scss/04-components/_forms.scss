@@ -26,15 +26,20 @@ input::-webkit-inner-spin-button {
   padding: calc(0.25rem - 1px) 0.25rem; // for border
   border-radius: 1.5rem;
 
-  .counter-number {
-    width: 1.5rem;
-    border: none;
-    padding: 0.5rem 0;
-    font: 500 1rem/1.5rem $font;
-    color: $grey-dark-super;
-    text-align: center;
-    -moz-appearance: textfield;
-    outline: none;
+  label {
+    margin: 0;
+    padding: 0;
+
+    .counter-number {
+      width: 1.5rem;
+      border: none;
+      padding: 0.5rem 0;
+      font: 500 1rem/1.5rem $font;
+      color: $grey-dark-super;
+      text-align: center;
+      -moz-appearance: textfield;
+      outline: none;
+    }
   }
 }
 
@@ -49,13 +54,20 @@ input::-webkit-inner-spin-button {
     width: 100%;
     outline: none;
 
-    &:focus {
-      outline: none;
-      border-color: $teal;
-    }
-
     &.error {
       border-color: $red;
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 0.25rem rgba($teal, 0.16);
+        border-color: $teal;
+      }
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 0.25rem rgba($teal, 0.16);
+      border-color: $teal;
     }
   }
 
@@ -85,13 +97,13 @@ input::-webkit-inner-spin-button {
 
     &:focus + .checkbox {
       border: 1px solid $teal;
-      background-color: $grey-border;
+      box-shadow: 0 0 0 0.25rem rgba($teal, 0.2);
     }
 
     @media (hover: hover) {
       &:hover + .checkbox {
         border: 1px solid $teal;
-        background-color: $grey-border;
+        box-shadow: 0 0 0 0.25rem rgba($teal, 0.2);
       }
     }
 
