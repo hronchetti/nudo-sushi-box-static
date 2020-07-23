@@ -47,6 +47,9 @@ input::-webkit-inner-spin-button {
   display: block;
 
   input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     font: 400 1rem/1.5rem $font;
     border: 1px solid $grey-border;
     border-radius: 0.25rem;
@@ -54,6 +57,7 @@ input::-webkit-inner-spin-button {
     color: $grey-dark-super;
     padding: calc(0.75rem - 1px) 1rem; // for border
     width: 100%;
+    white-space: normal;
     outline: none;
 
     &.error {

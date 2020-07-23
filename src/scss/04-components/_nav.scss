@@ -1,17 +1,3 @@
-@keyframes navPanelAnimationIn {
-  from {
-  }
-  to {
-  }
-}
-
-@keyframes navPanelAnimationOut {
-  from {
-  }
-  to {
-  }
-}
-
 .nav-wrapper {
   position: sticky;
   background-color: white;
@@ -19,6 +5,12 @@
   left: 0;
   right: 0;
   z-index: 1000;
+  width: 100vw;
+  overflow: hidden;
+
+  &.active {
+    overflow: visible;
+  }
 
   .nav-mobile {
     @include preset-animation;

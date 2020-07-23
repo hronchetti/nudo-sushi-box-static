@@ -1,4 +1,4 @@
-<section class="nav-wrapper">
+<section class="nav-wrapper" id="nav-wrapper">
   <div class="nav-mobile" id="nav-mobile">
     <button class="nav-mobile-dismiss" onclick="hideMobileNav()">
       <span class="icon-close"></span>
@@ -79,5 +79,10 @@
     </div>
   </nav>
   @@include('./basket-drawer.html')
-  <div class="overlay" id="nav-mobile-overlay" onclick="hideMobileNav()"></div>
+  <div
+    class="overlay"
+    id="nav-mobile-overlay"
+    onclick="hideMobileNav()"
+    role="button"
+  ></div>
 </section>
