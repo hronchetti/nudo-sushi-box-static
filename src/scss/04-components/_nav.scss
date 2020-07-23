@@ -1,3 +1,17 @@
+@keyframes navPanelAnimationIn {
+  from {
+  }
+  to {
+  }
+}
+
+@keyframes navPanelAnimationOut {
+  from {
+  }
+  to {
+  }
+}
+
 .nav-wrapper {
   position: sticky;
   background-color: white;
@@ -138,9 +152,11 @@
       justify-content: center;
 
       a {
-        display: block;
-        width: 5.75rem;
-        margin: 0 auto;
+        svg {
+          display: block;
+          width: 5.75rem;
+          margin: 0 auto;
+        }
       }
     }
 
@@ -213,7 +229,9 @@
 
       .nav-logo {
         a {
-          width: 7.5rem;
+          svg {
+            width: 7.5rem;
+          }
         }
       }
 

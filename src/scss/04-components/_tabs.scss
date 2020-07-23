@@ -1,9 +1,9 @@
-.tabs {
+.tab-buttons {
   @include flexJustifyStart;
+  margin: 1rem 0;
 
-  .tab {
+  .tab-button {
     @include preset-button;
-    @include preset-animation;
     margin-right: 0.5rem;
     cursor: pointer;
     font: 500 1rem/1.5rem $font;
@@ -13,26 +13,59 @@
     padding: 0.5rem 1rem;
     color: $grey-dark-super;
     border-radius: 1.25rem;
-    transition: filter 250ms ease-in;
     width: max-content;
     border: 1px solid $grey-border;
 
     &:focus {
-      filter: brightness(90%);
+      background-color: #f3f3f5;
+      outline: none;
+      box-shadow: 0 0 0 0.25rem rgba($teal, 0.16);
+      border-color: $teal;
     }
 
     @media (hover: hover) {
       &:hover {
-        filter: brightness(90%);
+        background-color: #f3f3f5;
       }
     }
 
     &.active {
       border: 1px solid $teal;
       background-color: $teal;
+
+      &:focus {
+        filter: brightness(90%);
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          filter: brightness(90%);
+        }
+      }
     }
   }
 }
 
-.tab-content {
+.tabs {
+  overflow: hidden;
+
+  .tab {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+
+    p {
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .tab-buttons {
+    margin-top: 1.25rem 0;
+  }
 }

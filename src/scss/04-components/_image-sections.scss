@@ -1,5 +1,8 @@
 .image-section {
+  padding-top: 0;
+
   .image-section-content {
+    order: 1;
     max-width: 26.25rem; // enforcing max-characters per line for better web-reading
     margin: 0 auto;
 
@@ -12,15 +15,27 @@
   }
 
   .image-section-image {
+    order: 2;
     width: 100%;
+  }
+}
+
+@media (min-width: 800px) {
+  .image-section {
+    padding: 3rem 2rem;
+
+    .image-section-content {
+      order: 0;
+    }
+    .image-section-image {
+      order: 0;
+    }
   }
 }
 
 @media (min-width: 1100px) {
   .image-section {
-    &.image-section-first {
-      padding-top: 4.5rem;
-    }
+    padding: 5rem 3rem;
 
     .image-section-content {
       max-width: none;

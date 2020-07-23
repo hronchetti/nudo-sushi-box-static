@@ -4,6 +4,7 @@ table {
   border: 1px solid $grey-border;
   text-align: left;
   width: 100%;
+  margin-top: 0.75rem;
 
   th {
     font-weight: 500;
@@ -12,9 +13,10 @@ table {
 
   td,
   th {
-    padding: 0.5rem 1rem;
+    padding: 0.25rem 0.75rem;
     border-bottom: 1px solid $grey-border;
     border-right: 1px solid $grey-border;
+    vertical-align: top;
 
     &:last-of-type {
       border-right: none;
@@ -26,6 +28,24 @@ table {
       td {
         border-bottom: none;
       }
+    }
+  }
+
+  &.table-column-2 {
+    td,
+    th {
+      width: 50%;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  table {
+    margin-top: 1.5rem;
+
+    td,
+    th {
+      padding: 0.5rem 1rem;
     }
   }
 }

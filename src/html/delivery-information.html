@@ -82,54 +82,83 @@
       <section class="wrapper grid-2 image-section">
         <div class="image-section-content">
           <h2>Delivery costs &amp; zones</h2>
-          <div class="tabs">
+          <div class="tab-buttons">
             <button
               type="button"
-              class="tab active"
-              onclick="setTabs('north-east')"
+              class="tab-button active"
+              onclick="setTabs(event, 'north-east')"
             >
               North East
             </button>
-            <button type="button" class="tab" onclick="setTabs('manchester')">
+            <button
+              type="button"
+              class="tab-button"
+              onclick="setTabs(event, 'manchester')"
+            >
               Manchester
             </button>
           </div>
-          <div class="tab-content">
-            <p>
-              Our North East kitchen deliveres Mon - Sun, 9am - 8:30pm to the
-              postcodes shown below:
-            </p>
-            <table>
-              <thead>
-                <tr>
-                  <th>Postcode</th>
-                  <th>Delivery cost</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>NE1</td>
-                  <td>£1.50</td>
-                </tr>
-                <tr>
-                  <td>NE2 - NE4</td>
-                  <td>£2.00</td>
-                </tr>
-                <tr>
-                  <td>NE5 - NE12</td>
-                  <td>£2.50</td>
-                </tr>
-                <tr>
-                  <td>NE15 & NE21</td>
-                  <td>£2.50</td>
-                </tr>
-              </tbody>
-            </table>
-            <p>
-              The minimum order value accepted is £12.00 (Free delivery for
-              orders above £25).
-            </p>
-          </div>
+          <section class="tabs">
+            <div id="north-east" class="tab active">
+              <p>
+                Our North East kitchen deliveres Mon - Sun, 9am - 8:30pm to the
+                postcodes shown below:
+              </p>
+              <table class="table-column-2">
+                <thead>
+                  <tr>
+                    <th>Postcode</th>
+                    <th>Delivery cost</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>NE1</td>
+                    <td>£1.50</td>
+                  </tr>
+                  <tr>
+                    <td>NE2 - NE4</td>
+                    <td>£2.00</td>
+                  </tr>
+                  <tr>
+                    <td>NE5 - NE12</td>
+                    <td>£2.50</td>
+                  </tr>
+                  <tr>
+                    <td>NE15 & NE21</td>
+                    <td>£2.50</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>
+                The minimum order value accepted is £15.00 (Free delivery for
+                orders above £25).
+              </p>
+            </div>
+            <div id="manchester" class="tab">
+              <p>
+                Our Manchester kitchen deliveres Mon - Sun, 12pm - 9:30pm (last
+                order at 8:30pm) to the postcodes shown below:
+              </p>
+              <table class="table-column-2">
+                <thead>
+                  <tr>
+                    <th>Postcode</th>
+                    <th>Delivery cost</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>M1. M2, M3, M4, M5, M6, M7, M8, M14, M15, M17</td>
+                    <td>Free</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>
+                The minimum order value accepted is £15.00.
+              </p>
+            </div>
+          </section>
         </div>
         <img
           class="image-section-image"

@@ -11,7 +11,8 @@
     margin: 0 auto;
   }
 
-  .tabs {
+  .tab-buttons {
+    margin: 0;
     @include flexJustifyCenter;
   }
 }
