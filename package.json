@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate",
-  "version": "1.0.1",
-  "description": "Simple frontend boilerplate using Gulp",
+  "name": "nudo-sushi-box",
+  "version": "1.0.0",
+  "description": "A shopify instance for ordering sushi in North East England and Manchester",
   "scripts": {
     "dev": "gulp",
     "build": "gulp build",

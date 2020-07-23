@@ -27,6 +27,10 @@ body {
   -webkit-tap-highlight-color: transparent;
   margin: 0;
   padding: 0;
+
+  &:focus {
+    outline: $teal auto 1px;
+  }
 }
 
 *::-moz-focus-inner {

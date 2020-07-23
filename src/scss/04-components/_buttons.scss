@@ -4,8 +4,9 @@
   cursor: pointer;
   color: $grey-dark-super;
   padding: 0.5rem;
-  background-color: transparent;
+  background-color: white;
   border-radius: 50%;
+  transition: background-color 250ms ease-in;
 
   span {
     display: block;
@@ -16,8 +17,6 @@
   &:focus {
     background-color: #f3f3f5;
     outline: none;
-    box-shadow: 0 0 0 0.25rem rgba($teal, 0.16);
-    border-color: $teal;
   }
 
   @media (hover: hover) {
@@ -55,7 +54,6 @@
   &.button-arrow {
     position: relative;
     padding-right: 3rem;
-    transition: padding-right 250ms ease-in-out, filter 250ms ease-in;
 
     &:after {
       font-family: "icons" !important;
@@ -88,6 +86,7 @@
   @extend %button;
   background-color: $teal;
   filter: brightness(100%);
+  transition: filter 250ms ease-in;
 
   &.grey {
     background-color: $grey;
@@ -116,6 +115,10 @@
       filter: brightness(90%);
     }
   }
+
+  &.button-arrow {
+    transition: padding-right 250ms ease-in-out, filter 250ms ease-in;
+  }
 }
 
 .button-secondary {
@@ -123,6 +126,7 @@
   border: 1px solid $grey-border;
   padding: calc(0.75rem - 1px) 1.25rem; // compensating for border
   background-color: white;
+  transition: background-color 250ms ease-in;
 
   &:focus {
     background-color: #f3f3f5;
@@ -132,6 +136,10 @@
     &:hover {
       background-color: #f3f3f5;
     }
+  }
+
+  &.button-arrow {
+    transition: padding-right 250ms ease-in-out, background-color 250ms ease-in;
   }
 }
 
@@ -146,9 +154,7 @@
   width: max-content;
 
   &:focus {
-    outline: none;
     text-decoration: none;
-    box-shadow: 0 0 0 0.125rem rgba($teal, 1);
   }
 
   @media (hover: hover) {

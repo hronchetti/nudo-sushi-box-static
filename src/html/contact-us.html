@@ -16,8 +16,79 @@
   </head>
   <body>
     @@include('./components/nav.html')
-    <header class="wrapper header-site">
-      <h1>General enquiries</h1>
+    <header class="wrapper header-contact-us">
+      <div class="header-contact-us-left">
+        <h1>General enquiries</h1>
+        <ul class="contact-options">
+          <li>
+            <a href="mailto: customers@nudosushibox.com" class="contact-option">
+              <span class="icon-email contact-option-icon"></span>
+              <span class="contact-option-text"
+                >customers@nudosushibox.com</span
+              >
+            </a>
+          </li>
+          <li>
+            <a href="tel: 0191 447 2980" class="contact-option">
+              <span class="icon-phone contact-option-icon"></span>
+              <span class="contact-option-text">0191 447 2980</span>
+            </a>
+          </li>
+        </ul>
+        <div class="social-icons large">
+          <ul>
+            <li>
+              <a
+                href="https://www.facebook.com/NudoSushiBox"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="./icons/social/facebook-dark.svg"
+                  alt="Facebook logo"
+                  title="Facebook"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/nudosushibox/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="./icons/social/instagram-dark.svg"
+                  alt="Instagram logo"
+                  title="Instagram"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/company/nudo-sushi-box-ltd/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="./icons/social/linkedIn-dark.svg"
+                  alt="LinkedIn logo"
+                  title="LinkedIn"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <a href="our-stores.html" class="button-link"
+          >Contact a store directly</a
+        >
+      </div>
+      <div class="header-contact-us-divider"></div>
+      <div class="header-contact-us-right">
+        <h2 class="h3">We might have the answer already!</h2>
+        <a href="faqs.html" class="button-secondary button-arrow"
+          >Frequently asked questions</a
+        >
+      </div>
     </header>
     <main>
       <section class="wrapper grid-2 image-section image-section-first">
@@ -34,10 +105,69 @@
             solve the issue. Let us know how we can improve using the form
             below:
           </p>
+          <form class="contact-form">
+            <div class="input-wrapper">
+              <label for="name">Your name</label>
+              <input
+                name="name"
+                id="name"
+                type="email"
+                placeholder="Who are we talking to?"
+              />
+              <span class="input-error"></span>
+            </div>
+            <div class="input-wrapper">
+              <label for="order-number"
+                >Order no. <span class="optional-text">Optional</span></label
+              >
+              <input
+                name="order-number"
+                id="order-number"
+                type="text"
+                placeholder="12345"
+              />
+              <span class="input-error"></span>
+            </div>
+            <div class="input-wrapper grid-full-width">
+              <label for="email">Email</label>
+              <input
+                name="email"
+                id="email"
+                type="email"
+                placeholder="So we can respond to your issue"
+              />
+              <span class="input-error"></span>
+            </div>
+            <div class="input-wrapper grid-full-width">
+              <label for="phone">Phone</label>
+              <input
+                name="phone"
+                id="phone"
+                type="number"
+                placeholder="In case we need more details"
+              />
+              <span class="input-error"></span>
+            </div>
+            <div class="input-wrapper grid-full-width">
+              <label for="issue">What was wrong?</label>
+              <textarea
+                name="issue"
+                id="issue"
+                placeholder="How can we improve?"
+                rows="5"
+              ></textarea>
+              <span class="input-error"></span>
+            </div>
+            <button type="submit" class="button-primary">
+              Submit - help us improve
+            </button>
+          </form>
         </div>
       </section>
       <section class="background-teal-light">
-        <section class="wrapper grid-2 image-section">
+        <section
+          class="wrapper grid-2 image-section image-section-extra-padding"
+        >
           <div class="image-section-content">
             <h2>Looking for a job?</h2>
             <p>
@@ -53,6 +183,19 @@
                 >careers@nudosushibox.com</a
               >
             </p>
+            <div class="vacancies">
+              <span class="text-bold vacancies-heading">Open vacancies</span>
+              <section class="vacancies-vacancy">
+                <span class="text-bold">Assistant Manager (Full-time)</span>
+                <span>Durham, The Bridges Shopping Centre</span>
+              </section>
+              <section class="vacancies-vacancy">
+                <span class="text-bold"
+                  >Shop Assistant (Part-time, 20 hrs pw)</span
+                >
+                <span>Manchester, Mosley Street</span>
+              </section>
+            </div>
           </div>
           <img
             class="image-section-image"

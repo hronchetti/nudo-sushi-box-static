@@ -1,0 +1,30 @@
+.social-icons {
+  &.large {
+    ul {
+      li {
+        a {
+          img {
+            width: 1.5rem;
+            margin-right: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: 2.5rem 2.5rem 2.5rem;
+    align-items: center;
+
+    li {
+      a {
+        padding: 0;
+
+        img {
+          margin: 0.5rem 1rem 0.5rem 0;
+        }
+      }
+    }
+  }
+}

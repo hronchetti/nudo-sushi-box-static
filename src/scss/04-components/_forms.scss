@@ -46,7 +46,8 @@ input::-webkit-inner-spin-button {
 .input-wrapper {
   display: block;
 
-  input {
+  input,
+  textarea {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -59,6 +60,7 @@ input::-webkit-inner-spin-button {
     width: 100%;
     white-space: normal;
     outline: none;
+    resize: none;
 
     &.error {
       border-color: $red;
