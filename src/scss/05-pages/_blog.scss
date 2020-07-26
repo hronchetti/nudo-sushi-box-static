@@ -5,13 +5,16 @@
   color: $grey-text;
   text-align: center;
   background-color: white;
-  transition: background-color 300ms ease-in-out;
+  transition: background-color 300ms ease-in;
+  border-radius: 0.25rem;
 
   .blog-article-image {
     position: relative;
     padding-bottom: 75%;
 
     img {
+      border-top-left-radius: 0.25rem;
+      border-top-right-radius: 0.25rem;
       position: absolute;
       width: 100%;
       height: 100%;
@@ -53,6 +56,10 @@
   @media (hover: hover) {
     &:hover {
       background-color: $grey-light-super;
+
+      .link-arrow {
+        padding-right: 2.25rem;
+      }
     }
   }
 }
@@ -73,6 +80,13 @@
 
       .blog-article-image {
         height: 100%;
+
+        img {
+          border-top-right-radius: 0rem;
+        }
+      }
+      .blog-article-content {
+        padding: 1.5rem;
       }
     }
   }
@@ -86,6 +100,8 @@
   .blog-article {
     .blog-article-content {
       padding: 1.5rem 1.5rem 1.75rem 1.5rem;
+      margin: 0 auto;
+      max-width: 30rem;
 
       .blog-article-latest-tag {
         margin-bottom: 1.5rem;

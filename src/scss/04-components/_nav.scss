@@ -23,10 +23,11 @@
     width: 100%;
     max-width: 25rem;
     transform: translate3d(-100%, 0, 0);
-    transition: transform 500ms ease-in-out;
+    transition: transform 500ms ease-out;
 
     &.active {
       transform: translate3d(0, 0, 0);
+      transition: transform 500ms ease-in;
     }
 
     .nav-mobile-dismiss {

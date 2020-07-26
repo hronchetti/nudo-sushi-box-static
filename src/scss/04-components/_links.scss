@@ -38,6 +38,7 @@
   width: max-content;
   font-weight: 500;
   color: $grey-text;
+  transition: padding 300ms ease-in-out;
 
   &:after {
     font-family: "icons" !important;
