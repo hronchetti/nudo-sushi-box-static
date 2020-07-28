@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="title" content="Lorem ipsum dolor sit." />
-    <meta name="description" content="Lorem ipsum dolor sit." />
+    <meta name="title" content="" />
+    <meta name="description" content="" />
 
     <!-- Style -->
     <link rel="stylesheet" href="css/main.min.css" />
@@ -20,10 +20,57 @@
       <h1>Frequently asked questions</h1>
       @@include('./components/divider-teal.html')
     </header>
-    <main></main>
+    <main class="wrapper sidebar-layout">
+      <article class="sidebar-layout-content faqs">
+        <!-- prettier-ignore -->
+        @@include('./components/faq.html', {
+          "question": "How long will my order take to be delivered?",
+          "answer": "Although we endeavour to get everybody’s order to them in the quickest time possible we do give up to 90 mins for delivery. Please be aware when ordering food for ASAP that it may take up-to this amount of time. If you wish for food to be delivered for a specific time we suggest placing the order well in advance to ensure you’re not disappointed.", 
+        })
+        @@include('./components/faq.html', {
+          "question": "I placed my order but the payment page hasn't refreshed — did you get my order?",
+          "answer": "Although we endeavour to get everybody’s order to them in the quickest time possible we do give up to 90 mins for delivery. Please be aware when ordering food for ASAP that it may take up-to this amount of time. If you wish for food to be delivered for a specific time we suggest placing the order well in advance to ensure you’re not disappointed.", 
+        })
+        @@include('./components/faq.html', {
+          "question": "My order hasn't arrived with me yet — when will I get my order?",
+          "answer": "Although we endeavour to get everybody’s order to them in the quickest time possible we do give up to 90 mins for delivery. Please be aware when ordering food for ASAP that it may take up-to this amount of time. If you wish for food to be delivered for a specific time we suggest placing the order well in advance to ensure you’re not disappointed.", 
+        })
+        @@include('./components/faq.html', {
+          "question": "I had a bad experience with you — how can I register a concern?",
+          "answer": "Although we endeavour to get everybody’s order to them in the quickest time possible we do give up to 90 mins for delivery. Please be aware when ordering food for ASAP that it may take up-to this amount of time. If you wish for food to be delivered for a specific time we suggest placing the order well in advance to ensure you’re not disappointed.", 
+        })
+        @@include('./components/faq.html', {
+          "question": "I live outside your delivery radius, but I've heard you offer store collections — how do I collect an order from a store?",
+          "answer": "Although we endeavour to get everybody’s order to them in the quickest time possible we do give up to 90 mins for delivery. Please be aware when ordering food for ASAP that it may take up-to this amount of time. If you wish for food to be delivered for a specific time we suggest placing the order well in advance to ensure you’re not disappointed.", 
+        })
+        @@include('./components/faq.html', {
+          "question": "Can you book an order in-store?",
+          "answer": "Although we endeavour to get everybody’s order to them in the quickest time possible we do give up to 90 mins for delivery. Please be aware when ordering food for ASAP that it may take up-to this amount of time. If you wish for food to be delivered for a specific time we suggest placing the order well in advance to ensure you’re not disappointed.", 
+        })
+        @@include('./components/faq.html', {
+          "question": "Do you accept cash-in-hand payments for deliveries?",
+          "answer": "Although we endeavour to get everybody’s order to them in the quickest time possible we do give up to 90 mins for delivery. Please be aware when ordering food for ASAP that it may take up-to this amount of time. If you wish for food to be delivered for a specific time we suggest placing the order well in advance to ensure you’re not disappointed.", 
+        })
+      </article>
+      <aside class="sidebar-layout-sidebar-wrapper">
+        <div class="sidebar-layout-sidebar">
+          <h3>Our favourites</h3>
+          <section class="sidebar-layout-sidebar-products">
+            @@include('./components/product.html')
+          </section>
+          <section class="sidebar-layout-sidebar-final-push">
+            <h3>Love sushi? You’ll love Nudo Sushi Box!</h3>
+            <a href="order-online.html" class="button-primary button-arrow"
+              >Order online now</a
+            >
+          </section>
+        </div>
+      </aside>
+    </main>
     @@include('./components/join-mailing-list.html')
     @@include('./components/footer.html')
     <!-- Scripts -->
     <script src="js/index.min.js"></script>
+    <script src="js/faqs.min.js"></script>
   </body>
 </html>
