@@ -16,9 +16,28 @@
   </head>
   <body>
     @@include('./components/nav.html')
-    <section class="background-teal-light">
-      @@include('./components/header-landing-page.html')
-      <section>
+    <header class="header-landing-page">
+      <div class="header-landing-page-content">
+        <h1>The ‘Rolls-Rice’ of Japanese food</h1>
+        <p>
+          Browse our online menu filled with mouth-watering japanese cuisine
+          today and order straight to your front door within 90 minutes.
+        </p>
+        <a href="order-online.html" class="button-primary button-arrow"
+          >Order online now</a
+        >
+      </div>
+      <img
+        class="header-landing-page-image"
+        src="./images/nudo-sushi-box-platter.jpg"
+        alt="Nudo Sushi Box Platter"
+        title="Nudo Sushi Box Platter"
+      />
+      <div class="header-landing-page-image-background"></div>
+      <div class="header-landing-page-background"></div>
+    </header>
+    <main>
+      <section class="background-teal-light">
         <section class="wrapper section">
           <h2>Sushi that's funky — in a good way!</h2>
           @@include('./components/divider-teal.html')
@@ -28,8 +47,6 @@
           >
         </section>
       </section>
-    </section>
-    <main>
       <section class="wrapper section">
         <h2>This week's favourites</h2>
         @@include('./components/divider-ginger-dark.html')

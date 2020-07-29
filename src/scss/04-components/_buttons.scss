@@ -50,6 +50,7 @@
   color: $grey-dark-super;
   border-radius: 1.5rem;
   width: max-content;
+  max-width: 100%;
 
   &:focus {
     outline: none;
@@ -60,6 +61,7 @@
   &.button-arrow {
     position: relative;
     padding-right: 3rem;
+    transition: padding-right 250ms ease-in-out;
 
     &:after {
       font-family: "icons" !important;
@@ -126,10 +128,6 @@
       filter: brightness(90%);
     }
   }
-
-  &.button-arrow {
-    transition: padding-right 250ms ease-in-out, filter 250ms ease-in;
-  }
 }
 
 .button-secondary {
@@ -146,10 +144,6 @@
     &:hover {
       background-color: #f3f3f5;
     }
-  }
-
-  &.button-arrow {
-    transition: padding-right 250ms ease-in-out, background-color 250ms ease-in;
   }
 }
 

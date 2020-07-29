@@ -16,10 +16,74 @@
   </head>
   <body>
     @@include('./components/nav.html')
-    <header class="wrapper header-order-online">
-      <h1 class="h2">Happiness in a box, delivered</h1>
+    <header class="header-order-online-wrapper">
+      <section class="header-order-online">
+        <h1 class="h2">Happiness in a box, delivered</h1>
+        <form class="header-order-online-search">
+          <label class="input-wrapper header-order-online-search-box">
+            <span class="hidden">Search all products</span>
+            <div class="input-icon-left">
+              <input
+                type="search"
+                name="postcode"
+                id="postcode"
+                placeholder="Search all products"
+              />
+              <span class="icon-search"></span>
+            </div>
+          </label>
+          <button
+            type="submit"
+            class="button-primary header-order-online-search-button"
+          >
+            <span class="header-order-online-search-button-text">Search</span>
+          </button>
+        </form>
+        <span class="header-order-online-search-results"
+          >Showing <span class="bold">31</span> results for
+          <span class="bold">“sushi”</span></span
+        >
+      </section>
+      <p class="header-order-online-delivery-info">
+        For delivery information
+        <a href="delivery-information.html">click here</a>
+      </p>
+      <div class="header-order-online-background"></div>
+      <img
+        class="header-order-online-image"
+        src="./images/nudo-sushi-box-spread.jpg"
+        alt="A selection of Nudo Sushi Box products"
+        title="Nudo Sushi Box platter"
+      />
     </header>
-    <main></main>
+    <main class="order-online">
+      <button class="order-online-filters-mobile-button">
+        Filters
+      </button>
+      <div class="order-online-filters"></div>
+      <div class="order-online-sort"></div>
+      <div class="grid-3 order-online-products">
+        <h2 class="order-online-product-count">31 products</h2>
+        @@include('./components/product.html')
+        @@include('./components/product.html')
+        @@include('./components/product.html')
+        @@include('./components/product.html')
+        @@include('./components/product.html')
+        @@include('./components/product.html')
+        @@include('./components/product.html')
+        @@include('./components/product.html')
+        @@include('./components/product.html')
+        @@include('./components/product.html')
+        @@include('./components/product.html')
+        @@include('./components/product.html')
+        @@include('./components/product.html')
+        @@include('./components/product.html')
+        @@include('./components/product.html')
+        @@include('./components/product.html')
+        @@include('./components/product.html')
+        @@include('./components/product.html')
+      </div>
+    </main>
     @@include('./components/join-mailing-list.html')
     @@include('./components/footer.html')
     <!-- Scripts -->

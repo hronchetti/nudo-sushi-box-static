@@ -1,3 +1,59 @@
+.header-landing-page {
+  position: relative;
+  padding: 8rem 0 0 0;
+
+  .header-landing-page-image {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 56%;
+    object-fit: cover;
+    opacity: 0.8;
+  }
+
+  .header-landing-page-image-background {
+    background-color: $grey-dark-super;
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 56%;
+  }
+
+  .header-landing-page-background {
+    background-color: $teal-light;
+    position: absolute;
+    z-index: -3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .header-landing-page-content {
+    background-color: white;
+    border-radius: 0.25rem;
+    width: calc(100% - 2.5rem);
+    max-width: 25rem;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1.5rem 1.5rem 2rem 1.5rem;
+
+    p {
+      width: calc(100% - 2rem);
+      margin: 0.75rem auto 0 auto;
+      max-width: 25rem;
+    }
+
+    .button-primary {
+      margin: 1.25rem auto 0;
+    }
+  }
+}
+
 .value-propositions {
   display: grid;
   grid-template-columns: 1fr;
@@ -15,12 +71,34 @@
     }
 
     p {
-      margin: 0;
+      max-width: 15rem;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .header-landing-page {
+    .header-landing-page-image,
+    .header-landing-page-image-background {
+      height: calc(100% - 5rem);
     }
   }
 }
 
 @media (min-width: 800px) {
+  .header-landing-page {
+    .header-landing-page-content {
+      width: fit-content;
+      max-width: none;
+
+      h1 {
+        width: 26rem;
+        margin: 0 auto;
+      }
+    }
+  }
+
   .value-propositions {
     margin: auto;
     grid-template-columns: 1fr 1fr 1fr;
@@ -33,5 +111,27 @@
   .value-propositions {
     grid-template-columns: 15rem 15rem 15rem;
     gap: 10%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header-landing-page {
+    padding-top: 12.5rem;
+
+    .header-landing-page-content {
+      padding: 2rem 2rem 2.5rem 2rem;
+
+      h1 {
+        width: 33.5rem;
+      }
+
+      p {
+        margin-top: 1.25rem;
+      }
+
+      .button-primary {
+        margin-top: 1.5rem;
+      }
+    }
   }
 }

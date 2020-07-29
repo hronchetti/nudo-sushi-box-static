@@ -8,19 +8,18 @@
   top: 0;
   right: 0;
   transform: translate3d(100%, 0, 0);
-  transition: transform 500ms ease-out;
+  transition: transform 500ms ease-in-out;
   max-width: 25rem;
 
   &.active {
     transform: translate3d(0, 0, 0);
-    transition: transform 500ms ease-in;
   }
 
   .basket-drawer-header {
     display: grid;
     grid-template-columns: 2.5rem 1fr 2.5rem;
     align-items: center;
-    padding: 1rem 0.75rem calc(1rem - 1px) 0.75rem; // for border to make height: 4.5rem;
+    padding: 0.625rem 0.75rem calc(0.625rem - 1px) 0.75rem; // for border to make height: 3.75rem;
     border-bottom: 1px solid $grey-border;
 
     .basket-drawer-header-title {
@@ -35,8 +34,8 @@
 
   .basket-drawer-body {
     height: calc(
-      100vh - 13.75rem
-    ); // 100vh - basket-drawer-header & basket-drawer-footer
+      100% - 13rem
+    ); // 100vh - basket-drawer-header (3.75rem) & basket-drawer-footer (9.25rem)
     overflow: auto;
     padding: 1.5rem 1.25rem;
   }
@@ -47,5 +46,25 @@
     gap: 0.75rem;
     padding: calc(1.25rem - 1px) 1.25rem 1.25rem 1.25rem; // for border to make height: 9.25rem;
     border-top: 1px solid $grey-border;
+    position: absolute;
+    width: 100%;
+    max-width: 25rem;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+@media (min-width: 600px) {
+  .basket-drawer {
+    .basket-drawer-header {
+      padding-top: 1rem;
+      padding-bottom: calc(1rem - 1px); // for border to make height: 4.5rem;
+    }
+
+    .basket-drawer-body {
+      height: calc(
+        100% - 13.75rem
+      ); // 100vh - basket-drawer-header (4.5rem) & basket-drawer-footer (9.25rem)
+    }
   }
 }
