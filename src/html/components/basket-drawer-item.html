@@ -1,15 +1,48 @@
-<li class="basket-drawer-item">
-  <div class="basket-drawer-row">
-    <span class="basket-drawer-row-name">
+<li class="basket-item">
+  <div class="basket-row">
+    <span class="basket-row-name">
       @@product
     </span>
-    <span class="basket-drawer-row-price">
+    <span class="basket-row-price">
       @@price
     </span>
   </div>
-  <div class="basket-drawer-item-controls">
-    @@include('./forms/counter.html')
-    <button class="button-link" type="button">
+  <div class="basket-item-controls">
+    <div class="counter">
+      <button
+        type="button"
+        class="button-circle basket-drawer-button"
+        aria-label="Decrease quantity by 1"
+        disabled
+        tabindex="-1"
+      >
+        <span class="icon-minus"></span>
+      </button>
+      <label>
+        <span class="hidden">Quantity</span>
+        <input
+          class="counter-number basket-drawer-button"
+          type="number"
+          value="1"
+          name="quantity"
+          tabindex="-1"
+        />
+      </label>
+      <button
+        type="button"
+        class="button-circle basket-drawer-button"
+        aria-label="Increase quantity by 1"
+        tabindex="-1"
+      >
+        <span class="icon-plus"></span>
+      </button>
+    </div>
+
+    <button
+      class="button-link basket-drawer-button"
+      type="button"
+      tabindex="-1"
+    >
       Remove
     </button>
   </div>

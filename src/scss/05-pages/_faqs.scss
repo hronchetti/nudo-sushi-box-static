@@ -1,6 +1,7 @@
-.sidebar-layout-content {
-  &.faqs {
-    margin-top: 1.5rem;
+.faqs {
+  margin-top: 1.5rem;
+
+  .sidebar-layout-content {
     max-width: none;
 
     .faq {
@@ -90,13 +91,17 @@
 }
 
 @media (min-width: 800px) {
-  .sidebar-layout-content {
-    &.faqs {
+  .faqs {
+    margin-top: 3rem;
+
+    .sidebar-layout-content {
       .faq {
         padding: 0.75rem 0;
+        gap: 0 1rem;
 
         .faq-header {
           border-radius: 1.5rem;
+          gap: 1rem;
 
           .faq-icon {
             height: 2rem;

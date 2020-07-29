@@ -1,0 +1,174 @@
+.basket {
+  padding-top: 1rem;
+
+  .basket-items {
+    .basket-header {
+      display: grid;
+      grid-template-columns: 1fr 3rem;
+      align-items: center;
+      padding-bottom: 0.5rem;
+      gap: 1.5rem;
+      border-bottom: 1px solid $grey-border;
+    }
+
+    .basket-item {
+      padding: 1rem 0;
+      display: grid;
+      grid-template-columns: 4rem 1fr;
+      gap: 0 1.25rem;
+      border-bottom: 1px solid $grey-border;
+
+      .basket-item-photo {
+        background-color: $ginger-light;
+        position: relative;
+        padding-bottom: 100%;
+
+        img {
+          position: absolute;
+          width: 90%;
+          height: 90%;
+          margin: 5%;
+          object-fit: contain;
+        }
+      }
+
+      .basket-item-details {
+        .basket-item-row {
+          border-top: none;
+          padding: 0;
+          margin: 0;
+
+          &.nutrition {
+            margin: 0.25rem 0 1rem;
+          }
+
+          .basket-row-name {
+            font-weight: 700;
+            font-size: 1.125rem;
+          }
+        }
+      }
+    }
+  }
+
+  .basket-totals {
+    h2 {
+      margin: 1rem 0;
+    }
+
+    .basket-instructions {
+      margin-bottom: 1.75rem;
+    }
+  }
+}
+
+.basket-row {
+  display: grid;
+  grid-template-columns: 1fr 3.5rem;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid $grey-border;
+
+  .basket-row-name {
+    font: 500 1rem/1.5rem $font;
+    color: $grey-dark-super;
+    padding-bottom: 0.25rem;
+  }
+
+  .basket-row-price {
+    font: 400 1rem/1.5rem $font;
+    color: $grey-dark-super;
+    padding-bottom: 0.25rem;
+    text-align: right;
+  }
+}
+
+.basket-instructions {
+  margin-top: 0.5rem;
+}
+
+.basket-extras {
+  padding-top: 0;
+
+  .basket-extras-heading {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .basket {
+    display: grid;
+    grid-template-columns: 1fr 20rem;
+    padding-top: 2rem;
+    gap: 6.5rem;
+
+    .basket-items {
+      .basket-header {
+        padding: 0 0 1rem 0;
+      }
+
+      .basket-item {
+        &:last-of-type {
+          border-bottom: none;
+        }
+      }
+    }
+
+    .basket-totals {
+      h2 {
+        margin: 0.5rem 0 1.25rem 0;
+      }
+    }
+  }
+
+  .basket-extras {
+    .basket-extras-heading {
+      padding-top: 2rem;
+      border-top: 1px solid $grey-border;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .basket {
+    padding-top: 3rem;
+
+    .basket-items {
+      .basket-header {
+        padding-bottom: calc(1.25rem - 1px); // for border
+      }
+
+      .basket-item {
+        padding: 1.5rem 0;
+        grid-template-columns: 7.975rem 1fr;
+        gap: 0 2rem;
+
+        .basket-item-details {
+          .basket-item-row {
+            &.nutrition {
+              margin-top: 0.5rem;
+            }
+
+            .basket-row-name {
+              font-size: 1.325rem;
+              line-height: 1.75rem;
+            }
+          }
+        }
+      }
+    }
+
+    .basket-totals {
+      h2 {
+        margin-bottom: calc(1.5rem - 1px); // for border
+      }
+    }
+  }
+
+  .basket-extras {
+    .basket-extras-heading {
+      padding-top: 3rem;
+      margin-bottom: 2rem;
+    }
+  }
+}

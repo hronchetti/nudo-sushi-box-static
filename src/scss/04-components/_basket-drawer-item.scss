@@ -1,24 +1,22 @@
-.basket-drawer-body {
-  .basket-drawer-item {
+.basket-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  padding-bottom: 1rem;
+
+  .basket-row {
+    padding-bottom: 0;
+  }
+
+  .basket-item-controls {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-    padding-bottom: 1rem;
+    grid-template-columns: 7.625rem 1fr;
+    gap: 1rem;
+    align-items: center;
 
-    .basket-drawer-row {
-      padding-bottom: 0;
-    }
-
-    .basket-drawer-item-controls {
-      display: grid;
-      grid-template-columns: 7.625rem 1fr;
-      gap: 1rem;
-      align-items: center;
-
-      .button-link {
-        width: max-content;
-        height: max-content;
-      }
+    .button-link {
+      width: max-content;
+      height: max-content;
     }
   }
 }

@@ -16,10 +16,70 @@
   </head>
   <body>
     @@include('./components/nav.html')
-    <header class="wrapper header-site">
-      <h1>Your order</h1>
-    </header>
-    <main></main>
+    <form class="wrapper basket">
+      <div class="basket-items">
+        <section class="basket-header">
+          <h1 class="h3">Your order (2)</h1>
+          <button class="button-link button-link-centered" type="button">
+            Empty
+          </button>
+        </section>
+        <ul>
+          <!-- prettier-ignore -->
+          @@include('./components/basket-item.html', {
+            "product": "Avocado lover",
+            "price": "£4.49",
+          })
+          @@include('./components/basket-item.html', {
+            "product": "Chicken Japanese Curry with Rice",
+            "price": "£7.80",
+          })
+        </ul>
+      </div>
+      <div class="basket-totals">
+        <h2 class="h4">Order type</h2>
+        <div class="basket-row">
+          <span class="basket-row-name">
+            Sub total (2 items)
+          </span>
+          <span class="basket-row-price">
+            £12.29
+          </span>
+        </div>
+        <div class="basket-row">
+          <span class="basket-row-name">
+            Delivery charge
+          </span>
+          <span class="basket-row-price">
+            £2.50
+          </span>
+        </div>
+        <div class="basket-row">
+          <span class="basket-row-name">
+            Total
+          </span>
+          <span class="basket-row-price">
+            £14.69
+          </span>
+        </div>
+        <div class="basket-instructions">
+          <button class="button-link button-link-centered" type="button">
+            Add special instructions
+          </button>
+        </div>
+        <a href="#" class="button-primary button-full-width" disabled>
+          Checkout
+        </a>
+      </div>
+    </form>
+    <section class="wrapper basket-extras">
+      <h3 class="basket-extras-heading">Add extras</h3>
+      <section class="grid-4">
+        @@include('./components/product.html')
+        @@include('./components/product.html')
+        @@include('./components/product.html')
+      </section>
+    </section>
     @@include('./components/join-mailing-list.html')
     @@include('./components/footer.html')
     <!-- Scripts -->

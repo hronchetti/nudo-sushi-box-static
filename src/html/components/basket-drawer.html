@@ -1,10 +1,11 @@
 <div class="basket-drawer" id="basket-drawer">
   <header class="basket-drawer-header">
     <h4 class="basket-drawer-header-title">
-      Your order (1)
+      Your order (2)
     </h4>
     <button
-      class="button-circle grey"
+      class="button-circle grey basket-drawer-button"
+      tabindex="-1"
       onclick="hideBasket()"
       aria-label="Hide Basket"
     >
@@ -25,47 +26,61 @@
         })
       </ul>
       <!-- prettier-ignore -->
-      <div class="basket-drawer-row">
-        <span class="basket-drawer-row-name">
-          Sub total (1 item)
+      <div class="basket-row">
+        <span class="basket-row-name">
+          Sub total (2 items)
         </span>
-        <span class="basket-drawer-row-price">
+        <span class="basket-row-price">
           £12.29
         </span>
       </div>
-      <div class="basket-drawer-row">
-        <span class="basket-drawer-row-name">
+      <div class="basket-row">
+        <span class="basket-row-name">
           Delivery charge
         </span>
-        <span class="basket-drawer-row-price">
+        <span class="basket-row-price">
           £2.50
         </span>
       </div>
-      <div class="basket-drawer-row">
-        <span class="basket-drawer-row-name">
+      <div class="basket-row">
+        <span class="basket-row-name">
           Total
         </span>
-        <span class="basket-drawer-row-price">
+        <span class="basket-row-price">
           £14.69
         </span>
       </div>
-      <div class="basket-drawer-instructions">
-        <button class="button-link button-link-centered" type="button">
+      <div class="basket-instructions">
+        <button
+          class="button-link button-link-centered basket-drawer-button"
+          type="button"
+          tabindex="-1"
+        >
           Add special instructions
         </button>
       </div>
     </form>
   </section>
   <footer class="basket-drawer-footer">
-    <a href="basket.html" class="button-secondary button-full-width"
+    <a
+      href="basket.html"
+      class="button-secondary button-full-width basket-drawer-button"
+      tabindex="-1"
       >View basket</a
     >
-    <a class="button-primary button-full-width">Checkout for £14.69</a>
+    <a
+      href="#"
+      class="button-primary button-full-width basket-drawer-button"
+      tabindex="-1"
+      >Checkout</a
+    >
   </footer>
 </div>
 <div
-  class="overlay"
+  class="overlay basket-drawer-button"
+  tabindex="-1"
   id="basket-overlay"
   onclick="hideBasket()"
+  onkeydown="accessibleClick(event, this)"
   role="button"
 ></div>

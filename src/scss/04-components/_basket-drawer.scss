@@ -39,29 +39,6 @@
     ); // 100vh - basket-drawer-header & basket-drawer-footer
     overflow: auto;
     padding: 1.5rem 1.25rem;
-
-    .basket-drawer-row {
-      display: grid;
-      grid-template-columns: 1fr 3.5rem;
-      gap: 2rem;
-      padding: 1rem 0;
-      border-top: 1px solid $grey-border;
-
-      .basket-drawer-row-name {
-        font: 500 1rem/1.75rem $font;
-        color: $grey-dark-super;
-      }
-
-      .basket-drawer-row-price {
-        font: 400 1rem/1.75rem $font;
-        color: $grey-dark-super;
-        text-align: right;
-      }
-    }
-
-    .basket-drawer-instructions {
-      margin-top: 0.5rem;
-    }
   }
 
   .basket-drawer-footer {

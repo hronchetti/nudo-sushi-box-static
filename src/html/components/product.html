@@ -4,8 +4,8 @@
     <h3 class="h4">Avocado lover</h3>
     <span class="product-price">£4.49</span>
   </div>
-  <div class="product-nutrition">
-    <span class="product-nutrition-kcal">313 kcal</span>
+  <div class="nutrition">
+    <span class="nutrition-kcal">313 kcal</span>
     <span class="icon-vegan" title="Vegan"></span>
     <span class="icon-vegetarian" title="Vegetarian"></span>
     <span class="icon-gluten-free" title="Gluten free"></span>
@@ -13,7 +13,28 @@
     <span class="icon-healthy" title="Healthy & recommended"></span>
   </div>
   <div class="product-controls">
-    @@include('./forms/counter.html')
+    <div class="counter">
+      <button
+        type="button"
+        class="button-circle"
+        aria-label="Decrease quantity by 1"
+        disabled
+      >
+        <span class="icon-minus"></span>
+      </button>
+      <label>
+        <span class="hidden">Quantity</span>
+        <input class="counter-number" type="number" value="1" name="quantity" />
+      </label>
+      <button
+        type="button"
+        class="button-circle"
+        aria-label="Increase quantity by 1"
+      >
+        <span class="icon-plus"></span>
+      </button>
+    </div>
+
     <button class="button-secondary">
       Add <span class="product-control-large-only">to order</span>
     </button>

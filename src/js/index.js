@@ -27,6 +27,7 @@ const showBasket = () => {
   document.getElementById("basket-overlay").classList.add("active")
   lockBodyScroll("nav-wrapper")
   revealNavOverflow()
+  enableBasketButtonTabIndex()
 }
 
 const hideBasket = () => {
@@ -34,6 +35,7 @@ const hideBasket = () => {
   document.getElementById("basket-overlay").classList.remove("active")
   unlockBodyScroll("nav-wrapper")
   setTimeout(hideNavOverflow, 500) // 500 milliseconds  matches CSS transition duration
+  disableBasketButtonTabIndex()
 }
 
 const lockBodyScroll = (targetElementId) => {
@@ -52,4 +54,26 @@ const revealNavOverflow = () => {
 
 const hideNavOverflow = () => {
   document.getElementById("nav-wrapper").classList.remove("active")
+}
+
+const enableBasketButtonTabIndex = () => {
+  let basketButtons = document.getElementsByClassName("basket-drawer-button")
+
+  for (let i = 0; i < basketButtons.length; i++) {
+    basketButtons[i].tabIndex = "0"
+  }
+}
+
+const disableBasketButtonTabIndex = () => {
+  let basketButtons = document.getElementsByClassName("basket-drawer-button")
+
+  for (let i = 0; i < basketButtons.length; i++) {
+    basketButtons[i].tabIndex = "-1"
+  }
+}
+
+const accessibleClick = (event, element) => {
+  if (event.keyCode === 13) {
+    element.click()
+  }
 }

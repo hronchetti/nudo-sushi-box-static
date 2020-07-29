@@ -1,0 +1,57 @@
+<li class="basket-item">
+  <div>
+    <div class="basket-item-photo">
+      <img src="./images/products/LON24.png" alt="" title="" />
+    </div>
+  </div>
+  <div class="basket-item-details">
+    <div class="basket-row basket-item-row">
+      <span class="basket-row-name">
+        @@product
+      </span>
+      <span class="basket-row-price">
+        @@price
+      </span>
+    </div>
+    <div class="basket-item-row nutrition">
+      <span class="nutrition-kcal">313 kcal</span>
+      <span class="icon-vegan" title="Vegan"></span>
+      <span class="icon-vegetarian" title="Vegetarian"></span>
+      <span class="icon-gluten-free" title="Gluten free"></span>
+      <span class="icon-spicy" title="Spicy"></span>
+      <span class="icon-healthy" title="Healthy & recommended"></span>
+    </div>
+    <div class="basket-item-controls">
+      <div class="counter">
+        <button
+          type="button"
+          class="button-circle basket-drawer-button"
+          aria-label="Decrease quantity by 1"
+          disabled
+        >
+          <span class="icon-minus"></span>
+        </button>
+        <label>
+          <span class="hidden">Quantity</span>
+          <input
+            class="counter-number basket-drawer-button"
+            type="number"
+            value="1"
+            name="quantity"
+          />
+        </label>
+        <button
+          type="button"
+          class="button-circle basket-drawer-button"
+          aria-label="Increase quantity by 1"
+        >
+          <span class="icon-plus"></span>
+        </button>
+      </div>
+
+      <button class="button-link basket-drawer-button" type="button">
+        Remove
+      </button>
+    </div>
+  </div>
+</li>

@@ -1,0 +1,15 @@
+.nutrition {
+  margin-bottom: 1rem;
+  color: $grey-dark-super;
+  @include flexJustifyStart;
+  line-height: 1.5rem;
+
+  span {
+    display: block;
+    margin-right: 0.125rem;
+
+    &.nutrition-kcal {
+      margin-right: 0.5rem;
+    }
+  }
+}
