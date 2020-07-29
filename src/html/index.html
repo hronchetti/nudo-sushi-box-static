@@ -15,7 +15,119 @@
     <title>Homepage</title>
   </head>
   <body>
-    @@include('./components/nav.html')
+    <section class="nav-wrapper" id="nav-wrapper">
+      <section class="banner">
+        <div class="banner-contents">
+          <span class="icon-heart"></span>
+          <span class="banner-message"
+            >FREE DELIVERY when you try our Sushi Delivery services! Min order:
+            £15</span
+          >
+          <span class="icon-heart"></span>
+        </div>
+        <button
+          class="button-circle"
+          aria-label="Close banner"
+          onclick="closeBanner(this)"
+        >
+          <span class="icon-close"></span>
+        </button>
+      </section>
+      <div class="nav-mobile" id="nav-mobile">
+        <button class="nav-mobile-dismiss" onclick="hideMobileNav()">
+          <span class="icon-close"></span>
+        </button>
+        <section class="nav-mobile-links">
+          <ul class="nav-mobile-primary-links">
+            <li>
+              <a
+                class="button-primary button-full-width"
+                href="order-online.html"
+                >Order online</a
+              >
+            </li>
+            <li>
+              <a
+                class="button-secondary button-full-width"
+                href="your-account.html"
+                >Log in</a
+              >
+            </li>
+          </ul>
+          <ul class="nav-mobile-secondary-links">
+            <li>
+              <a class="active" href="/"><span class="selector">Home</span></a>
+            </li>
+            <li>
+              <a href="our-stores.html"
+                ><span class="selector">Our stores</span></a
+              >
+            </li>
+            <li>
+              <a href="#"><span class="selector">Store menu</span></a>
+            </li>
+            <li>
+              <a href="blog.html"><span class="selector">Blog</span></a>
+            </li>
+            <li>
+              <a href="contact-us.html"
+                ><span class="selector">Contact us</span></a
+              >
+            </li>
+          </ul>
+        </section>
+      </div>
+      <nav>
+        <div class="nav-left">
+          <button class="nav-hamburger" onclick="showMobileNav()">
+            <span class="icon-hamburger"></span>
+          </button>
+          <ul class="nav-desktop-links">
+            <li>
+              <a class="link" href="order-online.html">Order online</a>
+            </li>
+            <li>
+              <a class="link" href="our-stores.html">Our stores</a>
+            </li>
+            <li>
+              <a class="link" href="#">Store menu</a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-logo">
+          <a href="/">
+            @@include('./components/nudo-sushi-box-logo.html')
+          </a>
+        </div>
+        <div class="nav-right">
+          <ul class="nav-desktop-links">
+            <li>
+              <a class="link" href="blog.html">Blog</a>
+            </li>
+            <li>
+              <a class="link" href="contact-us.html">Contact us</a>
+            </li>
+            <li>
+              <a class="link" href="accounts-log-in.html">Log in</a>
+            </li>
+          </ul>
+          <button class="nav-basket-wrapper" onclick="showBasket()">
+            <div class="nav-basket">
+              <span class="icon-basket"></span>
+              <span class="nav-basket-count">2</span>
+            </div>
+            <span class="nav-basket-total">£14.69</span>
+          </button>
+        </div>
+      </nav>
+      @@include('./components/basket-drawer.html')
+      <div
+        class="overlay"
+        id="nav-mobile-overlay"
+        onclick="hideMobileNav()"
+        role="button"
+      ></div>
+    </section>
     <header class="header-landing-page">
       <div class="header-landing-page-content">
         <h1>The ‘Rolls-Rice’ of Japanese food</h1>

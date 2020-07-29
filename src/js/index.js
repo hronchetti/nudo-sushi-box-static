@@ -139,3 +139,7 @@ const setTabs = (e, tab) => {
   document.getElementById(tab).classList.add("active")
   e.currentTarget.classList.add("active")
 }
+
+// Banners
+
+const closeBanner = (banner) => {}

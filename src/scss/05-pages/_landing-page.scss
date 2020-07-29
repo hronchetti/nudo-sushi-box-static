@@ -1,6 +1,6 @@
 .header-landing-page {
   position: relative;
-  padding: 8rem 0 0 0;
+  padding: 4rem 0 0 0;
 
   .header-landing-page-image {
     position: absolute;
@@ -79,6 +79,8 @@
 
 @media (min-width: 600px) {
   .header-landing-page {
+    padding-top: 8rem;
+
     .header-landing-page-image,
     .header-landing-page-image-background {
       height: calc(100% - 5rem);
