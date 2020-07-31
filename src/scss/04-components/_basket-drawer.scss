@@ -22,8 +22,8 @@
     display: grid;
     grid-template-columns: 2.5rem 1fr 2.5rem;
     align-items: center;
-    padding: 0.625rem 0.75rem calc(0.625rem - 1px) 0.75rem; // for border to make height: 3.75rem;
-    border-bottom: 1px solid $grey-border;
+    padding: 0.625rem 0.75rem 0.625rem 0.75rem;
+    @include shadow-soft-shallow;
 
     .basket-drawer-header-title {
       text-align: center;
@@ -43,20 +43,21 @@
   }
 
   .basket-drawer-body {
-    // 100vh - basket-drawer-header (3.75rem) & basket-drawer-footer (9.25rem)
+    height: calc(
+      100% - 13rem
+    ); // 100vh - basket-drawer-header (3.75rem) & basket-drawer-footer (9.25rem)
     overflow: auto;
     padding: 1.5rem 1.25rem;
   }
 
   .basket-drawer-footer {
+    background-color: white;
+    @include shadow-soft-shallow;
     display: grid;
     grid-template-columns: 1fr;
     gap: 0.75rem;
-    padding: calc(1.25rem - 1px) 1.25rem 1.25rem 1.25rem; // for border to make height: 9.25rem;
-    border-top: 1px solid $grey-border;
+    padding: 1.25rem;
     position: sticky;
-    width: 100%;
-    max-width: 25rem;
     bottom: 0;
     right: 0;
   }
@@ -66,7 +67,7 @@
   .basket-drawer {
     .basket-drawer-header {
       padding-top: 1rem;
-      padding-bottom: calc(1rem - 1px); // for border to make height: 4.5rem;
+      padding-bottom: 1rem;
     }
 
     .basket-drawer-body {
