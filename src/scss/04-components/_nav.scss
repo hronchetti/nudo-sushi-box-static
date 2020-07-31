@@ -14,9 +14,9 @@
 
   .nav-mobile {
     @include preset-animation;
-    position: absolute;
+    position: fixed;
     background-color: white;
-    height: 100vh;
+    height: 100%;
     z-index: 1000;
     top: 0;
     left: 0;
