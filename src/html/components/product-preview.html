@@ -1,0 +1,186 @@
+<section class="product-preview" id="avocado-lover">
+  <div class="product-preview-photo">
+    <img
+      src="./images/products/LON24.png"
+      alt="Product Photo"
+      title="Product Photo"
+    />
+  </div>
+  <div class="product-preview-details">
+    <section
+      class="product-preview-details-section product-preview-details-header"
+    >
+      <h3>Avocado lover</h3>
+      <span class="product-preview-details-price">£4.49</span>
+      <button
+        class="button-circle"
+        onclick="toggleProductMoreInformation('avocado-lover')"
+      >
+        <span class="icon-close"></span>
+      </button>
+    </section>
+    <section class="product-preview-details-section">
+      <ul class="nutrition-facts">
+        <li>
+          <span class="icon-vegan" title="Vegan"></span
+          ><span class="nutrition-fact">Vegan</span>
+        </li>
+        <li>
+          <span class="icon-vegetarian" title="Vegetarian"></span
+          ><span class="nutrition-fact">Vegetarian</span>
+        </li>
+        <li>
+          <span class="icon-gluten-free" title="Gluten free"></span
+          ><span class="nutrition-fact">Gluten-free</span>
+        </li>
+        <li>
+          <span class="icon-spicy" title="Spicy"></span
+          ><span class="nutrition-fact">Spicy</span>
+        </li>
+        <li>
+          <span class="icon-healthy" title="Healthy & recommended"></span
+          ><span class="nutrition-fact">Healthy & recommended</span>
+        </li>
+      </ul>
+    </section>
+    <section class="product-preview-details-section">
+      <h4 class="h5">Allergens</h4>
+      <p>None</p>
+    </section>
+    <section class="product-preview-details-section">
+      <h4 class="h5">Nutritional information (per serving)</h4>
+      <section class="nutrition-category-wrapper">
+        <!-- prettier-ignore -->
+        @@include('./nutrition-category.html', {
+            "name": "kcal",
+            "value": "313", 
+        })
+        @@include('./nutrition-category.html', {
+            "name": "fat",
+            "value": "4.4g", 
+        })
+        @@include('./nutrition-category.html', {
+            "name": "sat. fat",
+            "value": "0.8g", 
+        })
+        @@include('./nutrition-category.html', {
+            "name": "carbs",
+            "value": "61g", 
+        })
+        @@include('./nutrition-category.html', {
+            "name": "sugars",
+            "value": "18g", 
+        })
+        @@include('./nutrition-category.html', {
+            "name": "fibre",
+            "value": "0g", 
+        })
+        @@include('./nutrition-category.html', {
+            "name": "protein",
+            "value": "4.8g", 
+        })
+        @@include('./nutrition-category.html', {
+            "name": "salt",
+            "value": "1.8g", 
+        })
+      </section>
+    </section>
+    <section class="product-preview-details-section">
+      <h4 class="h5">Nutritional information (per 100g)</h4>
+      <section class="nutrition-category-wrapper">
+        <!-- prettier-ignore -->
+        @@include('./nutrition-category.html', {
+              "name": "kcal",
+              "value": "213", 
+          })
+          @@include('./nutrition-category.html', {
+              "name": "fat",
+              "value": "3.0g", 
+          })
+          @@include('./nutrition-category.html', {
+              "name": "sat. fat",
+              "value": "0.5g", 
+          })
+          @@include('./nutrition-category.html', {
+              "name": "carbs",
+              "value": "42g", 
+          })
+          @@include('./nutrition-category.html', {
+              "name": "sugars",
+              "value": "12g", 
+          })
+          @@include('./nutrition-category.html', {
+              "name": "fibre",
+              "value": "0g", 
+          })
+          @@include('./nutrition-category.html', {
+              "name": "protein",
+              "value": "3.3g", 
+          })
+          @@include('./nutrition-category.html', {
+              "name": "salt",
+              "value": "1.8g", 
+          })
+      </section>
+    </section>
+    <section class="product-preview-details-section">
+      <h4 class="h5">Ingredients</h4>
+      <p>
+        Cooked Sushi Rice 80% (Corn syrup, Water, Fermented Rice extract (Rice
+        Alcohol, Salt, Acid E330), Distilled Vinegar, Preservatives (E211,
+        E202), Salt, Spirit vinegar (rice and sake cake extract), Avocado 4%,
+        Seaweed, Gari (Ginger, Water, Salt, Acids: E260 and E330, Preservative:
+        E202, Sweeteners: E951, E955 and E954, E621)
+      </p>
+    </section>
+  </div>
+  <footer class="product-preview-footer">
+    <div class="counter">
+      <button
+        type="button"
+        class="button-circle basket-drawer-button"
+        aria-label="Decrease quantity by 1"
+        disabled
+        tabindex="-1"
+        onclick="decreaseCounter(this)"
+      >
+        <span class="icon-minus"></span>
+      </button>
+      <label>
+        <span class="hidden">Quantity</span>
+        <input
+          class="counter-number basket-drawer-button"
+          type="number"
+          value="1"
+          name="quantity"
+          tabindex="-1"
+        />
+      </label>
+      <button
+        type="button"
+        class="button-circle basket-drawer-button"
+        aria-label="Increase quantity by 1"
+        tabindex="-1"
+        onclick="increaseCounter(this)"
+      >
+        <span class="icon-plus"></span>
+      </button>
+    </div>
+    <button
+      type="button"
+      class="button-secondary"
+      onclick="toggleProductMoreInformation('avocado-lover')"
+    >
+      Add to order
+    </button>
+  </footer>
+</section>
+<div
+  class="overlay product-overlay"
+  id="avocado-lover-overlay"
+  tabindex="-1"
+  onclick="toggleProductMoreInformation('avocado-lover')"
+  onkeydown="accessibleClick(event, this)"
+  role="button"
+  aria-label="Close product details"
+></div>

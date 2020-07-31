@@ -15,6 +15,7 @@
         aria-label="Decrease quantity by 1"
         disabled
         tabindex="-1"
+        onclick="decreaseCounter(this)"
       >
         <span class="icon-minus"></span>
       </button>
@@ -33,11 +34,11 @@
         class="button-circle basket-drawer-button"
         aria-label="Increase quantity by 1"
         tabindex="-1"
+        onclick="increaseCounter(this)"
       >
         <span class="icon-plus"></span>
       </button>
     </div>
-
     <button
       class="button-link basket-drawer-button"
       type="button"

@@ -1,7 +1,11 @@
 <li class="basket-item">
   <div>
     <div class="basket-item-photo">
-      <img src="./images/products/LON24.png" alt="" title="" />
+      <img
+        src="./images/products/LON24.png"
+        alt="Product Photo"
+        title="Product Photo"
+      />
     </div>
   </div>
   <div class="basket-item-details">
@@ -28,6 +32,7 @@
           class="button-circle basket-drawer-button"
           aria-label="Decrease quantity by 1"
           disabled
+          onclick="decreaseCounter(this)"
         >
           <span class="icon-minus"></span>
         </button>
@@ -44,6 +49,7 @@
           type="button"
           class="button-circle basket-drawer-button"
           aria-label="Increase quantity by 1"
+          onclick="increaseCounter(this)"
         >
           <span class="icon-plus"></span>
         </button>

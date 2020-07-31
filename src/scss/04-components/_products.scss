@@ -1,7 +1,17 @@
 .product {
   .product-photo {
-    padding: 0 0 100% 0;
+    cursor: pointer;
     background-color: $ginger-light;
+    position: relative;
+    padding-bottom: 100%;
+
+    img {
+      position: absolute;
+      width: 90%;
+      height: 90%;
+      margin: 5%;
+      object-fit: contain;
+    }
   }
 
   .product-details {

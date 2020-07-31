@@ -17,15 +17,14 @@
       <ul>
         <!-- prettier-ignore -->
         @@include('./basket-drawer-item.html', { 
-        "product": "Avocado lover",
-        "price": "£4.49", 
+          "product": "Avocado lover",
+          "price": "£4.49", 
         }) 
         @@include('./basket-drawer-item.html', { 
           "product": "Chicken Japanese Curry with Rice", 
           "price": "£7.80", 
         })
       </ul>
-      <!-- prettier-ignore -->
       <div class="basket-row">
         <span class="basket-row-name">
           Sub total (2 items)
@@ -83,4 +82,5 @@
   onclick="hideBasket()"
   onkeydown="accessibleClick(event, this)"
   role="button"
+  aria-label="Close Basket Pop-up"
 ></div>

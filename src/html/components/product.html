@@ -1,5 +1,16 @@
 <div class="product">
-  <div class="product-photo"></div>
+  <div
+    class="product-photo"
+    role="button"
+    aria-label="View product details"
+    onclick="toggleProductMoreInformation('avocado-lover')"
+  >
+    <img
+      src="./images/products/LON24.png"
+      alt="Product Photo"
+      title="Product Photo"
+    />
+  </div>
   <div class="product-details">
     <h3 class="h4">Avocado lover</h3>
     <span class="product-price">£4.49</span>
@@ -19,6 +30,7 @@
         class="button-circle"
         aria-label="Decrease quantity by 1"
         disabled
+        onclick="decreaseCounter(this)"
       >
         <span class="icon-minus"></span>
       </button>
@@ -30,12 +42,12 @@
         type="button"
         class="button-circle"
         aria-label="Increase quantity by 1"
+        onclick="increaseCounter(this)"
       >
         <span class="icon-plus"></span>
       </button>
     </div>
-
-    <button class="button-secondary">
+    <button type="button" class="button-secondary">
       Add <span class="product-control-large-only">to order</span>
     </button>
   </div>

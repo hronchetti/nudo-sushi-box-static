@@ -60,12 +60,21 @@
         </div>
         <div class="input-wrapper">
           <label for="password">Password</label>
-          <input
-            name="password"
-            id="password"
-            type="password"
-            placeholder="••••••••••"
-          />
+          <div class="input-password">
+            <input
+              name="password"
+              id="password"
+              type="password"
+              placeholder="••••••••••"
+            />
+            <button
+              type="button"
+              class="input-password-icon icon-show"
+              onclick="togglePasswordVisibility(this)"
+            >
+              <span class="hidden">Show password</span>
+            </button>
+          </div>
           <span class="input-error"></span>
         </div>
         <div class="accounts-form-centered-buttons">

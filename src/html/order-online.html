@@ -22,7 +22,7 @@
   </head>
   <body>
     <section class="nav-wrapper" id="nav-wrapper">
-      <section class="banner" id="banner-check-we-deliver">
+      <section class="banner dismissable active" id="banner-check-we-deliver">
         <div class="banner-contents">
           <form class="banner-check-we-deliver">
             <label class="input-wrapper">
@@ -36,17 +36,18 @@
                 />
               </div>
             </label>
-            <button
-              class="button-primary banner-check-we-deliver-button"
-              onclick="closeBanner(this, 'banner-check-we-deliver')"
-            >
+            <button class="button-primary banner-check-we-deliver-button">
               <span class="banner-check-we-deliver-button-text"
                 >Check we deliver</span
               ><span class="icon-search"></span>
             </button>
           </form>
         </div>
-        <button class="button-circle" aria-label="Close banner">
+        <button
+          class="button-circle"
+          aria-label="Close banner"
+          onclick="closeBanner('banner-check-we-deliver')"
+        >
           <span class="icon-close"></span>
         </button>
       </section>

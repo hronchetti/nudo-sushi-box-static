@@ -29,6 +29,13 @@
 
     .button-circle {
       grid-column: 3/4;
+      padding: 0.25rem;
+
+      .icon-close {
+        font-size: 2rem;
+        width: 2rem;
+        height: 2rem;
+      }
     }
   }
 

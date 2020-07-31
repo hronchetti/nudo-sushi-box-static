@@ -118,6 +118,38 @@ input::-webkit-inner-spin-button {
       color: $grey-light;
     }
   }
+
+  .input-password {
+    position: relative;
+
+    input {
+      padding-right: 3rem;
+    }
+
+    .input-password-icon {
+      @include preset-button;
+      font-size: 1.5rem;
+      position: absolute;
+      padding: 0.5rem;
+      right: 0.25rem;
+      top: 0.25rem;
+      color: $grey-light;
+      background-color: white;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &:focus {
+        background-color: #f3f3f5;
+        outline: none;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          background-color: #f3f3f5;
+        }
+      }
+    }
+  }
 }
 
 .checkbox-wrapper {
@@ -186,6 +218,15 @@ input::-webkit-inner-spin-button {
     pointer-events: none;
     font-weight: 400;
     margin-bottom: 0;
+  }
+}
+
+.feedback {
+  min-height: 1.5rem;
+
+  &.positive {
+  }
+  &.negative {
   }
 }
 

@@ -1,6 +1,5 @@
 .button-circle {
   @include preset-button;
-  @include preset-animation;
   cursor: pointer;
   color: $grey-dark-super;
   padding: 0.5rem;

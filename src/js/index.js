@@ -1,15 +1,3 @@
-// Footer
-
-const getFooterYear = () => {
-  document.getElementById(
-    "footer-site-copyright-year"
-  ).innerHTML = new Date().getFullYear()
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  getFooterYear()
-})
-
 // Navigation
 
 const showMobileNav = () => {
@@ -82,6 +70,69 @@ const unlockBodyScroll = () => {
   // bodyScrollLock.enableBodyScroll(targetElement)
 }
 
+// Products
+
+const toggleProductMoreInformation = (product) => {
+  document.getElementById(product).classList.toggle("active")
+  const productOverlay = product + "-overlay"
+  console.log(productOverlay)
+  document.getElementById(productOverlay).classList.toggle("active")
+}
+
+// Counter
+
+const increaseCounter = (counterElement) => {
+  const counterInputWrapper = counterElement.previousElementSibling.children
+
+  for (let i = 0; i < counterInputWrapper.length; i++) {
+    if (counterInputWrapper[i].type === "number") {
+      if (counterInputWrapper[i].value === "1") {
+        counterElement.previousElementSibling.previousElementSibling.disabled = false
+      }
+      counterInputWrapper[i].value++
+    }
+  }
+}
+
+const decreaseCounter = (counterElement) => {
+  const counterInputWrapper = counterElement.nextElementSibling.children
+
+  for (let i = 0; i < counterInputWrapper.length; i++) {
+    if (counterInputWrapper[i].type === "number") {
+      if (counterInputWrapper[i].value === "2") {
+        counterElement.disabled = true
+      }
+      counterInputWrapper[i].value--
+    }
+  }
+}
+
+// Footer
+
+const getFooterYear = () => {
+  document.getElementById(
+    "footer-site-copyright-year"
+  ).innerHTML = new Date().getFullYear()
+}
+
+// Forms
+
+const togglePasswordVisibility = (passwordButton) => {
+  if (passwordButton.classList.contains("icon-show")) {
+    // Changing icon
+    passwordButton.classList.remove("icon-show")
+    passwordButton.classList.add("icon-hide")
+    // Mutating input type
+    passwordButton.previousElementSibling.type = "text"
+  } else if (passwordButton.classList.contains("icon-hide")) {
+    // Changing icon
+    passwordButton.classList.remove("icon-hide")
+    passwordButton.classList.add("icon-show")
+    // Mutating input type
+    passwordButton.previousElementSibling.type = "password"
+  }
+}
+
 // Accounts
 
 const showNewAddressForm = () => {
@@ -142,4 +193,13 @@ const setTabs = (e, tab) => {
 
 // Banners
 
-const closeBanner = (banner) => {}
+const closeBanner = (bannerId) => {
+  document.getElementById(bannerId).classList.remove("active")
+  sessionStorage.setItem(bannerId, "false")
+}
+
+// Document ready
+
+document.addEventListener("DOMContentLoaded", () => {
+  getFooterYear()
+})

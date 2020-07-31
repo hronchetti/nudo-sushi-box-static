@@ -21,119 +21,7 @@
     <title>Homepage</title>
   </head>
   <body>
-    <section class="nav-wrapper" id="nav-wrapper">
-      <section class="banner">
-        <div class="banner-contents">
-          <span class="icon-heart"></span>
-          <span class="banner-message"
-            >FREE DELIVERY when you try our Sushi Delivery services! Min order:
-            £15</span
-          >
-          <span class="icon-heart"></span>
-        </div>
-        <button
-          class="button-circle"
-          aria-label="Close banner"
-          onclick="closeBanner(this)"
-        >
-          <span class="icon-close"></span>
-        </button>
-      </section>
-      <div class="nav-mobile" id="nav-mobile">
-        <button class="nav-mobile-dismiss" onclick="hideMobileNav()">
-          <span class="icon-close"></span>
-        </button>
-        <section class="nav-mobile-links">
-          <ul class="nav-mobile-primary-links">
-            <li>
-              <a
-                class="button-primary button-full-width"
-                href="order-online.html"
-                >Order online</a
-              >
-            </li>
-            <li>
-              <a
-                class="button-secondary button-full-width"
-                href="your-account.html"
-                >Log in</a
-              >
-            </li>
-          </ul>
-          <ul class="nav-mobile-secondary-links">
-            <li>
-              <a class="active" href="/"><span class="selector">Home</span></a>
-            </li>
-            <li>
-              <a href="our-stores.html"
-                ><span class="selector">Our stores</span></a
-              >
-            </li>
-            <li>
-              <a href="#"><span class="selector">Store menu</span></a>
-            </li>
-            <li>
-              <a href="blog.html"><span class="selector">Blog</span></a>
-            </li>
-            <li>
-              <a href="contact-us.html"
-                ><span class="selector">Contact us</span></a
-              >
-            </li>
-          </ul>
-        </section>
-      </div>
-      <nav>
-        <div class="nav-left">
-          <button class="nav-hamburger" onclick="showMobileNav()">
-            <span class="icon-hamburger"></span>
-          </button>
-          <ul class="nav-desktop-links">
-            <li>
-              <a class="link" href="order-online.html">Order online</a>
-            </li>
-            <li>
-              <a class="link" href="our-stores.html">Our stores</a>
-            </li>
-            <li>
-              <a class="link" href="#">Store menu</a>
-            </li>
-          </ul>
-        </div>
-        <div class="nav-logo">
-          <a href="/">
-            @@include('./components/nudo-sushi-box-logo.html')
-          </a>
-        </div>
-        <div class="nav-right">
-          <ul class="nav-desktop-links">
-            <li>
-              <a class="link" href="blog.html">Blog</a>
-            </li>
-            <li>
-              <a class="link" href="contact-us.html">Contact us</a>
-            </li>
-            <li>
-              <a class="link" href="accounts-log-in.html">Log in</a>
-            </li>
-          </ul>
-          <button class="nav-basket-wrapper" onclick="showBasket()">
-            <div class="nav-basket">
-              <span class="icon-basket"></span>
-              <span class="nav-basket-count">2</span>
-            </div>
-            <span class="nav-basket-total">£14.69</span>
-          </button>
-        </div>
-      </nav>
-      @@include('./components/basket-drawer.html')
-      <div
-        class="overlay"
-        id="nav-mobile-overlay"
-        onclick="hideMobileNav()"
-        role="button"
-      ></div>
-    </section>
+    @@include('./components/nav.html')
     <header class="header-landing-page">
       <div class="header-landing-page-content">
         <h1>The ‘Rolls-Rice’ of Japanese food</h1>
@@ -173,6 +61,7 @@
           @@include('./components/product.html')
           @@include('./components/product.html')
           @@include('./components/product.html')
+          @@include('./components/product-preview.html')
         </div>
         <a href="order-online.html" class="button-primary button-arrow"
           >View all products</a
@@ -195,22 +84,32 @@
         </section>
       </section>
       <section class="wrapper section left">
-        <h2>Where it all started</h2>
-        @@include('./components/divider-ginger-dark.html')
-        <p>
-          When it comes to sushi, it can sometimes be hard to find good quality
-          on the go. Our aim is to make sushi a regular, healthy treat as
-          opposed to an occasional luxury. We offer distinctive, unique and
-          beautifully prepared foods at affordable prices.
-        </p>
-        <p>
-          Ordering food from Nudo couldn't be easier. Simply visit one of our
-          growing number of stores to eat in, take away, or, order straight to
-          your door through our website.
-        </p>
-        <a href="about-us.html" class="button-primary ginger-light button-arrow"
-          >The Nudo story</a
-        >
+        <div class="section-content">
+          <h2>Where it all started</h2>
+          @@include('./components/divider-ginger-dark.html')
+          <p>
+            When it comes to sushi, it can sometimes be hard to find good
+            quality on the go. Our aim is to make sushi a regular, healthy treat
+            as opposed to an occasional luxury. We offer distinctive, unique and
+            beautifully prepared foods at affordable prices.
+          </p>
+          <p>
+            Ordering food from Nudo couldn't be easier. Simply visit one of our
+            growing number of stores to eat in, take away, or, order straight to
+            your door through our website.
+          </p>
+          <a
+            href="about-us.html"
+            class="button-primary ginger-light button-arrow"
+            >The Nudo story</a
+          >
+        </div>
+        <img
+          class="section-image"
+          src="./images/about-us.jpg"
+          alt="Nudo Sushi Box Store Manager in Haymarket Store"
+          title="Nudo Sushi Box Store Manager in Haymarket Store"
+        />
       </section>
       <section class="wrapper section">
         <h2>As seen on</h2>
