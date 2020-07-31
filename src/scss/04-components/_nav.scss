@@ -144,6 +144,10 @@
       justify-content: center;
 
       a {
+        display: block;
+        width: max-content;
+        margin: 0 auto;
+
         svg {
           display: block;
           width: 5.75rem;
@@ -164,11 +168,9 @@
       .nav-basket-wrapper {
         cursor: pointer;
         @include preset-button;
+        @include flexJustifyEnd;
         color: $grey-dark-super;
         height: max-content;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 0.25rem;
         align-items: center;
         border-radius: 1.25rem;
         width: max-content;
@@ -187,6 +189,7 @@
         .nav-basket {
           padding: 0.5rem;
           position: relative;
+          margin-right: 0.25rem;
 
           .icon-basket {
             display: block;
@@ -232,7 +235,6 @@
         .nav-basket-wrapper {
           margin-left: 1.5rem;
           padding-right: 0.75rem;
-          grid-template-columns: 2.5rem 1fr;
 
           .nav-basket-total {
             display: block;

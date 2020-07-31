@@ -130,7 +130,7 @@
   .header-order-online-wrapper {
     .header-order-online {
       padding: 1rem 2rem;
-      width: fit-content;
+      width: max-content;
 
       .header-order-online-search {
         grid-template-columns: 1fr 6.25rem;

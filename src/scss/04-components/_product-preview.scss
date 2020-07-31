@@ -87,6 +87,11 @@
 @media (min-width: 800px) {
   .product-preview {
     grid-template-columns: 1fr 24rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 40rem;
+    max-width: 68rem;
 
     &.active {
       display: grid;
@@ -94,6 +99,7 @@
 
     .product-preview-photo {
       grid-row: 1/3;
+      height: 100%;
     }
 
     .product-preview-details {
@@ -133,11 +139,6 @@
 @media (min-width: 1024px) {
   .product-preview {
     grid-template-columns: 1fr 29rem;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-height: 40rem;
-    max-width: 68rem;
 
     .product-preview-details {
       .product-preview-details-section {

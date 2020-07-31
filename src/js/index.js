@@ -3,21 +3,21 @@
 const showMobileNav = () => {
   document.getElementById("nav-mobile").classList.add("active")
   document.getElementById("nav-mobile-overlay").classList.add("active")
-  lockBodyScroll("nav-wrapper")
+  document.getElementsByTagName("body")[0].style.overflow = "hidden"
   revealNavOverflow()
 }
 
 const hideMobileNav = () => {
   document.getElementById("nav-mobile").classList.remove("active")
   document.getElementById("nav-mobile-overlay").classList.remove("active")
-  unlockBodyScroll("nav-wrapper")
+  document.getElementsByTagName("body")[0].style.overflow = "visible"
   setTimeout(hideNavOverflow, 500) // 500 milliseconds  matches CSS transition duration
 }
 
 const showBasket = () => {
   document.getElementById("basket-drawer").classList.add("active")
   document.getElementById("basket-overlay").classList.add("active")
-  lockBodyScroll("nav-wrapper")
+  document.getElementsByTagName("body")[0].style.overflow = "hidden"
   revealNavOverflow()
   enableBasketButtonTabIndex()
 }
@@ -25,7 +25,7 @@ const showBasket = () => {
 const hideBasket = () => {
   document.getElementById("basket-drawer").classList.remove("active")
   document.getElementById("basket-overlay").classList.remove("active")
-  unlockBodyScroll("nav-wrapper")
+  document.getElementsByTagName("body")[0].style.overflow = "visible"
   setTimeout(hideNavOverflow, 500) // 500 milliseconds  matches CSS transition duration
   disableBasketButtonTabIndex()
 }
@@ -60,16 +60,6 @@ const accessibleClick = (event, element) => {
   }
 }
 
-const lockBodyScroll = (targetElementId) => {
-  // const targetElement = document.getElementById(targetElementId)
-  // bodyScrollLock.disableBodyScroll(targetElement)
-}
-
-const unlockBodyScroll = () => {
-  // const targetElement = document.getElementById(targetElementId)
-  // bodyScrollLock.enableBodyScroll(targetElement)
-}
-
 // Products
 
 const toggleProductMoreInformation = (product) => {
@@ -77,6 +67,12 @@ const toggleProductMoreInformation = (product) => {
   const productOverlay = product + "-overlay"
   console.log(productOverlay)
   document.getElementById(productOverlay).classList.toggle("active")
+
+  if (document.getElementById(product).classList.contains("active")) {
+    document.getElementsByTagName("body")[0].style.overflow = "hidden"
+  } else {
+    document.getElementsByTagName("body")[0].style.overflow = "visible"
+  }
 }
 
 // Counter
@@ -99,7 +95,10 @@ const decreaseCounter = (counterElement) => {
 
   for (let i = 0; i < counterInputWrapper.length; i++) {
     if (counterInputWrapper[i].type === "number") {
-      if (counterInputWrapper[i].value === "2") {
+      if (
+        counterInputWrapper[i].value === "2" ||
+        Math.sign(counterInputWrapper[i].value) !== 1
+      ) {
         counterElement.disabled = true
       }
       counterInputWrapper[i].value--
