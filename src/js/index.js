@@ -218,6 +218,28 @@ const showToasts = (e, buttonElement) => {
   }, 1000)
 }
 
+// Check we deliver
+
+const showDeliveryResponse = (e) => {
+  e.preventDefault()
+
+  document.getElementById("dialog-overlay").classList.add("active")
+  // if positive ->
+  document.getElementById("dialog-positive").classList.add("active")
+  // if negative ->
+  //document.getElementById("dialog-negative").classList.add("active")
+}
+
+const hideDeliveryResponse = (e) => {
+  e.preventDefault()
+
+  document.getElementById("dialog-overlay").classList.remove("active")
+  // if positive ->
+  document.getElementById("dialog-positive").classList.remove("active")
+  // if negative ->
+  //document.getElementById("dialog-negative").classList.remove("active")
+}
+
 // Document ready
 
 document.addEventListener("DOMContentLoaded", () => {

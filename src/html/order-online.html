@@ -36,7 +36,10 @@
                 />
               </div>
             </label>
-            <button class="button-primary banner-check-we-deliver-button">
+            <button
+              class="button-primary banner-check-we-deliver-button"
+              onclick="showDeliveryResponse(event)"
+            >
               <span class="banner-check-we-deliver-button-text"
                 >Check we deliver</span
               ><span class="icon-search"></span>
@@ -215,6 +218,54 @@
         @@include('./components/product-preview.html')
       </div>
     </main>
+    <div class="dialog" id="dialog-negative">
+      <button class="button-circle" onclick="hideDeliveryResponse(event)">
+        <span class="hidden">Close check we deliver dialog</span
+        ><span class="icon-close"></span>
+      </button>
+
+      <img
+        src="./images/illustrations/store-pick-up.svg"
+        alt="Store pick up"
+        title="Store pick up"
+      />
+      <div class="dialog-content">
+        <h3>Sorry, we don&apos;t deliver to your area</h3>
+        <p>You can still pick up an order from one of our stores</p>
+        <a href="our-stores.html" class="button-primary"
+          >Find your nearest store</a
+        >
+      </div>
+    </div>
+    <div class="dialog" id="dialog-positive">
+      <button class="button-circle" onclick="hideDeliveryResponse(event)">
+        <span class="hidden">Close check we deliver dialog</span
+        ><span class="icon-close"></span>
+      </button>
+
+      <img
+        src="./images/illustrations/delivery.svg"
+        alt="Delivery"
+        title="Delivery"
+      />
+      <div class="dialog-content">
+        <h3>We deliver to your area!</h3>
+        <p>
+          Our food is freshly prepared for every order and will arrive between
+          60-90 minutes after checkout
+        </p>
+        <button class="button-primary" onclick="hideDeliveryResponse(event)">
+          Continue shopping
+        </button>
+      </div>
+    </div>
+    <div
+      class="overlay dialog-overlay"
+      id="dialog-overlay"
+      onclick="hideDeliveryResponse(event)"
+      role="button"
+      aria-label="Close check we deliver dialog"
+    ></div>
     @@include('./components/join-mailing-list.html')
     @@include('./components/footer.html')
     <!-- Scripts -->
