@@ -12,8 +12,16 @@
   }
 
   .tab-buttons {
-    margin: 0;
+    margin: 0 0 1.5rem 0;
     @include flexJustifyCenter;
+  }
+}
+
+@media (min-width: 600px) {
+  .header-site {
+    .tab-buttons {
+      margin-bottom: 2rem;
+    }
   }
 }
 
@@ -23,6 +31,10 @@
 
     h1 {
       margin-bottom: 1.5rem;
+    }
+
+    .tab-buttons {
+      margin-bottom: 2.5rem;
     }
   }
 }

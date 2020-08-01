@@ -39,34 +39,36 @@
         </button>
       </div>
     </header>
-    <main class="wrapper grid-3">
-      <a href="blog-post.html" class="blog-article blog-article-latest">
-        <div class="blog-article-image">
-          <img
-            src="./images/nudo-sushi-box-platter.jpg"
-            alt="placeholder"
-            title="placeholder"
-          />
+    <main class="background-ginger-light">
+      <section class="wrapper wrapper-small grid-3">
+        <a href="blog-post.html" class="blog-article blog-article-latest">
+          <div class="blog-article-image">
+            <img
+              src="./images/nudo-sushi-box-platter.jpg"
+              alt="placeholder"
+              title="placeholder"
+            />
+          </div>
+          <div class="blog-article-content">
+            <span class="blog-article-latest-tag">Latest article</span>
+            <h2>COVID: An update on our stores and opening times</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+            <span class="link-arrow">Read more</span>
+          </div>
+        </a>
+        @@include('./components/blog-article.html')
+        @@include('./components/blog-article.html')
+        @@include('./components/blog-article.html')
+        @@include('./components/blog-article.html')
+        @@include('./components/blog-article.html')
+        @@include('./components/blog-article.html')
+        <div class="blog-article-load-more">
+          <button class="button-primary grey-dark-super">Load more</button>
         </div>
-        <div class="blog-article-content">
-          <span class="blog-article-latest-tag">Latest article</span>
-          <h2>COVID: An update on our stores and opening times</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-          <span class="link-arrow">Read more</span>
-        </div>
-      </a>
-      @@include('./components/blog-article.html')
-      @@include('./components/blog-article.html')
-      @@include('./components/blog-article.html')
-      @@include('./components/blog-article.html')
-      @@include('./components/blog-article.html')
-      @@include('./components/blog-article.html')
-      <div class="blog-article-load-more">
-        <button class="button-primary grey-dark-super">Load more</button>
-      </div>
+      </section>
     </main>
     @@include('./components/join-mailing-list.html')
     @@include('./components/footer.html')

@@ -5,3 +5,7 @@
 @mixin shadow-soft-shallow-reverse {
   box-shadow: 0 -0.125rem 0.375rem rgba($grey-dark-super, 0.03);
 }
+
+@mixin shadow-hard {
+  box-shadow: 0 0.25rem 0.375rem rgba($grey-dark-super, 0.1);
+}

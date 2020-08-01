@@ -10,6 +10,18 @@
     display: block;
     color: $grey-dark-super;
     margin-bottom: 1.25rem;
+    box-shadow: none;
+    transition: box-shadow 250ms ease-in;
+
+    &:focus {
+      @include shadow-hard;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        @include shadow-hard;
+      }
+    }
 
     .social-feed-item-image {
       position: relative;
