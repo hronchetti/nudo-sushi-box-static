@@ -1,11 +1,13 @@
 .social-feed {
-  width: 100%;
-  backface-visibility: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  overflow: hidden;
 
   .social-feed-item {
     border-radius: 1rem;
     background-color: white;
-    display: inline-block;
+    display: block;
     color: $grey-dark-super;
     margin-bottom: 1.25rem;
 
@@ -37,7 +39,6 @@
       line-height: 1.375rem;
 
       .social-feed-item-content-heading {
-        display: block;
         font: 500 1rem/1.5rem $font;
       }
 
@@ -46,7 +47,6 @@
       }
     }
   }
-
   + .button-primary {
     margin-top: 0;
   }
@@ -54,29 +54,65 @@
 
 @media (min-width: 480px) {
   .social-feed {
-    column-count: 2;
-    column-gap: 2rem;
+    max-height: 2000px;
+
+    &:before,
+    &:after {
+      content: "";
+      flex-basis: 100%;
+      width: 0;
+      order: 2;
+    }
 
     .social-feed-item {
-      height: 100%;
-      break-inside: avoid;
+      width: calc((100% - 2rem) / 2);
+      margin-right: 2rem;
+
+      &:nth-of-type(2n + 2) {
+        margin-right: 0;
+      }
     }
   }
 }
 
 @media (min-width: 800px) {
   .social-feed {
-    column-count: 3;
+    max-height: 1500px;
+
+    .social-feed-item {
+      width: calc((100% - 4rem) / 3);
+
+      &:nth-of-type(2n + 2) {
+        margin-right: 2rem;
+      }
+
+      &:nth-of-type(3n + 3) {
+        margin-right: 0;
+      }
+    }
   }
 }
 
 @media (min-width: 1024px) {
   .social-feed {
-    column-count: 4;
-    column-gap: 2.5rem;
+    max-height: 1100px;
 
     .social-feed-item {
-      margin-bottom: 2.5rem;
+      width: calc((100% - 9rem) / 4);
+      margin-right: 3rem;
+      margin-bottom: 2rem;
+
+      &:nth-of-type(2n + 2) {
+        margin-right: 3rem;
+      }
+
+      &:nth-of-type(3n + 3) {
+        margin-right: 3rem;
+      }
+
+      &:nth-of-type(4n + 4) {
+        margin-right: 0;
+      }
 
       .social-feed-item-content {
         line-height: 1.5rem;
