@@ -57,7 +57,13 @@
     .image-section-content {
       max-width: none;
       margin: 0;
-      padding-left: 8.33%;
+      padding-left: 4.16%;
+      padding-right: 8.33%;
+
+      &:first-child {
+        padding-left: 16.66%;
+        padding-right: 8.33%;
+      }
 
       p {
         max-width: 26.25rem; // enforcing max-characters per line for better web-reading

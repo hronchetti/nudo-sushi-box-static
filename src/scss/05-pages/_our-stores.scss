@@ -61,10 +61,31 @@
   }
 }
 
+@media (min-width: 600px) {
+  .store {
+    position: relative;
+    padding-bottom: 6.5rem;
+
+    .store-details {
+      .store-details-buttons {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
 @media (min-width: 800px) {
   .find-your-nearest-store {
     .find-your-nearest-store-delivery-information {
       margin-top: 2rem;
     }
+  }
+
+  .store {
+    position: relative;
+    padding-bottom: 3rem;
   }
 }

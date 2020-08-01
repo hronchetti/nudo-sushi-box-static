@@ -197,6 +197,27 @@ const closeBanner = (bannerId) => {
   sessionStorage.setItem(bannerId, "false")
 }
 
+// Contact form
+
+const showToasts = (e, buttonElement) => {
+  e.preventDefault()
+  buttonElement.classList.add("loading")
+  // CLEAR FORM
+
+  // Send request
+
+  // Once response is recieved (no timeout in real usage)
+  setTimeout(() => {
+    buttonElement.classList.remove("loading")
+    // if -> Positive feedback
+    document.getElementById("toast-wrapper").innerHTML =
+      '<div class="toast positive"><span class="toast-message">Issue submitted, we’ll be in contact within 1-2 working days</span></div>'
+    // if -> Negative feedback (case handled, changing message to suit case)
+    //document.getElementById("toast-wrapper").innerHTML +=
+    //  '<div class="toast negative"><span class="toast-message">Network error, no network connection found</span></div>'
+  }, 1000)
+}
+
 // Document ready
 
 document.addEventListener("DOMContentLoaded", () => {

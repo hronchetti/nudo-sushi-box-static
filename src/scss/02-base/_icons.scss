@@ -25,22 +25,23 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/*  */
-
+.icon-warning-circle:before {
+  content: "\e91c";
+}
+.icon-tick-circle:before {
+  content: "\e91b";
+}
 .icon-tick:before {
   content: "\e91a";
 }
-
 .icon-chevron-large-down:before {
   content: "\e919";
 }
-
 .icon-chevron-large-left:before {
   content: "\e919";
   display: block;
   transform: rotate(90deg);
 }
-
 .icon-arrow:before {
   content: "\e900";
 }

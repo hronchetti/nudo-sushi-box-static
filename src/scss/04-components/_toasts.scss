@@ -1,0 +1,50 @@
+@keyframes fly-up {
+  from {
+    transform: translate3d(0, 1.5rem, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.toast-wrapper {
+  .toast {
+    @include preset-animation;
+    color: $grey-dark-super;
+    border-radius: 1.5rem;
+    font: 500 1rem/1.5rem $font;
+    padding: 0.625rem 0.875rem 0.625rem calc(2.25rem + 0.875rem);
+    margin-bottom: 1.5rem;
+    position: relative;
+    opacity: 0;
+    transform: translate3d(1.5rem, 0, 0);
+    animation: fly-up 300ms ease-in-out forwards;
+
+    &:before {
+      font-size: 1.5rem;
+      font-family: "icons" !important;
+      position: absolute;
+      left: 0.875rem;
+      top: 0.625rem;
+      display: block;
+    }
+
+    &.positive {
+      background-color: #d9f0c0;
+
+      &:before {
+        content: "\e91b";
+      }
+    }
+
+    &.negative {
+      background-color: #f7d0d0;
+
+      &:before {
+        content: "\e91c";
+      }
+    }
+  }
+}

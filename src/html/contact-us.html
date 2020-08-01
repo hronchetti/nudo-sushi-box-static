@@ -114,27 +114,17 @@
           <form class="contact-form">
             <div class="input-wrapper">
               <label for="name">Your name</label>
-              <input
-                name="name"
-                id="name"
-                type="email"
-                placeholder="Who are we talking to?"
-              />
+              <input name="name" id="name" type="email" />
               <span class="input-error"></span>
             </div>
             <div class="input-wrapper">
               <label for="order-number"
                 >Order no. <span class="optional-text">Optional</span></label
               >
-              <input
-                name="order-number"
-                id="order-number"
-                type="text"
-                placeholder="12345"
-              />
+              <input name="order-number" id="order-number" type="text" />
               <span class="input-error"></span>
             </div>
-            <div class="input-wrapper grid-full-width">
+            <div class="input-wrapper">
               <label for="email">Email</label>
               <input
                 name="email"
@@ -144,8 +134,10 @@
               />
               <span class="input-error"></span>
             </div>
-            <div class="input-wrapper grid-full-width">
-              <label for="phone">Phone</label>
+            <div class="input-wrapper">
+              <label for="phone"
+                >Phone <span class="optional-text">Optional</span></label
+              >
               <input
                 name="phone"
                 id="phone"
@@ -154,7 +146,7 @@
               />
               <span class="input-error"></span>
             </div>
-            <div class="input-wrapper grid-full-width">
+            <div class="input-wrapper">
               <label for="issue">What was wrong?</label>
               <textarea
                 name="issue"
@@ -164,8 +156,13 @@
               ></textarea>
               <span class="input-error"></span>
             </div>
-            <button type="submit" class="button-primary">
-              Submit - help us improve
+            <div class="toast-wrapper" id="toast-wrapper"></div>
+            <button
+              type="submit"
+              class="button-primary"
+              onclick="showToasts(event, this)"
+            >
+              <span class="inner-text">Submit - help us improve</span>
             </button>
           </form>
         </div>
