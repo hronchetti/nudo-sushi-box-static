@@ -11,8 +11,10 @@
   transition: transform 500ms ease-in-out;
   max-width: 25rem;
   overflow: auto;
+  opacity: 0;
 
   &.active {
+    opacity: 1;
     transform: translate3d(0, 0, 0);
   }
 

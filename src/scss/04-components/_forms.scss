@@ -77,6 +77,12 @@ input::-webkit-inner-spin-button {
       box-shadow: 0 0 0 0.25rem rgba($teal, 0.16);
       border-color: $teal;
     }
+
+    &[type="search"] {
+      ::-webkit-search-cancel-button {
+        background-color: red;
+      }
+    }
   }
 
   .input-error {
@@ -218,15 +224,6 @@ input::-webkit-inner-spin-button {
     pointer-events: none;
     font-weight: 400;
     margin-bottom: 0;
-  }
-}
-
-.feedback {
-  min-height: 1.5rem;
-
-  &.positive {
-  }
-  &.negative {
   }
 }
 

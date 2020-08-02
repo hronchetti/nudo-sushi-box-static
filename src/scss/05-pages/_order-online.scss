@@ -78,58 +78,11 @@
   }
 }
 
-.order-online {
-  position: relative;
-
-  .order-online-filters-mobile-button {
-    @include preset-button;
-    display: block;
-    border-top: 1px solid $grey-border;
-    border-bottom: 1px solid $grey-border;
-    width: 100%;
-    padding: 0.75rem 3rem 0.75rem 1.25rem;
-    color: $grey-dark-super;
-    text-align: left;
-    position: relative;
-
-    &:after {
-      font-family: "icons" !important;
-      font-size: 1.5rem;
-      content: "\e903";
-      position: absolute;
-      width: 1.5rem;
-      height: 1.5rem;
-      right: 0.75rem;
-      top: 0.5rem;
-      color: $teal;
-    }
-  }
-
-  .order-online-filters {
-    padding: 1rem 1.25rem;
-    position: absolute;
-    background-color: white;
-    width: 100%;
-  }
-
-  .order-online-sort {
-    display: none;
-  }
-
-  .order-online-products {
-    padding: 1.25rem;
-
-    .order-online-product-count {
-      font: 500 1rem/1.5rem $font;
-      color: $grey-dark-super;
-    }
-  }
-}
-
 @media (min-width: 600px) {
   .header-order-online-wrapper {
     .header-order-online {
       padding: 1rem 2rem;
+      width: 34rem;
       width: max-content;
 
       .header-order-online-search {
@@ -147,21 +100,6 @@
             display: block;
           }
         }
-      }
-    }
-  }
-  .order-online {
-    .order-online-filters-mobile-button {
-      display: none;
-    }
-
-    .order-online-sort {
-      display: block;
-    }
-
-    .order-online-products {
-      .order-online-product-count {
-        display: none;
       }
     }
   }

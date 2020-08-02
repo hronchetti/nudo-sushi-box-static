@@ -1,4 +1,6 @@
 .section {
+  text-align: center;
+
   h2 {
     text-align: center;
   }
@@ -9,6 +11,7 @@
 
   > .button-primary,
   > .button-secondary {
+    display: inline-block;
     margin: 2rem auto 0;
   }
 
@@ -16,6 +19,7 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
+    text-align: left;
 
     .section-content {
       h2 {
@@ -28,6 +32,7 @@
       }
 
       .button-primary {
+        display: inline-block;
         margin: 1.5rem 0 0 0;
       }
     }
