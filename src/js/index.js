@@ -65,7 +65,6 @@ const accessibleClick = (event, element) => {
 const toggleProductMoreInformation = (product) => {
   document.getElementById(product).classList.toggle("active")
   const productOverlay = product + "-overlay"
-  console.log(productOverlay)
   document.getElementById(productOverlay).classList.toggle("active")
 
   if (document.getElementById(product).classList.contains("active")) {

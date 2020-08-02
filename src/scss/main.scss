@@ -16,8 +16,11 @@
 @import "03-utilities/flex";
 @import "03-utilities/grids";
 @import "03-utilities/hidden";
+@import "03-utilities/image-sections";
 @import "03-utilities/sections";
+@import "03-utilities/sidebar-layout";
 @import "03-utilities/text-accessories";
+@import "03-utilities/text-only-pages";
 @import "03-utilities/wrappers";
 
 // 04 COMPONENTS - Re-usable classes for whole elements / elements groups
@@ -31,7 +34,6 @@
 @import "04-components/forms";
 @import "04-components/header";
 @import "04-components/how-it-works";
-@import "04-components/image-sections";
 @import "04-components/join-mailing-list";
 @import "04-components/links";
 @import "04-components/nav";
@@ -39,12 +41,10 @@
 @import "04-components/overlay";
 @import "04-components/product-preview";
 @import "04-components/products";
-@import "04-components/sidebar-layout";
 @import "04-components/social-icons";
 @import "04-components/social-feed";
 @import "04-components/tables";
 @import "04-components/tabs";
-@import "04-components/text-only-pages";
 @import "04-components/toasts";
 
 // 05 PAGES - style adjustments unique to specific pages

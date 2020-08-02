@@ -6,13 +6,44 @@
     background-color: $ginger-light;
     position: relative;
     padding-bottom: 100%;
+    overflow: hidden;
 
+    @media (hover: hover) {
+      &:hover {
+        background-color: #f5f0e6;
+
+        .product-photo-message {
+          transform: translate3d(0, 0, 0);
+        }
+      }
+    }
     img {
       position: absolute;
       width: 90%;
       height: 90%;
       margin: 5%;
       object-fit: contain;
+    }
+
+    .product-photo-message {
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-weight: 500;
+      color: $grey-dark-super;
+      background-color: $grey-light-super;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      padding: 0.75rem;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      @media (hover: hover) {
+        @include preset-animation;
+        transform: translate3d(0, 100%, 0);
+        transition: transform 250ms ease-in-out;
+      }
     }
   }
 

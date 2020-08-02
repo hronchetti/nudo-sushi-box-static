@@ -46,6 +46,14 @@
 
         .sidebar-layout-sidebar-final-push {
           margin-top: 3rem;
+
+          &.sidebar-layout-sidebar-final-push-no-margin-top {
+            margin-top: 0;
+
+            h3 {
+              margin-top: 0;
+            }
+          }
         }
       }
     }

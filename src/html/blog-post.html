@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/main.min.css" />
 
     <!-- Title -->
-    <title></title>
+    <title>Blog post</title>
   </head>
   <body>
     @@include('./components/nav.html')
@@ -276,15 +276,16 @@
           </section>
         </div>
       </aside>
-      @@include('./components/product-preview.html')
     </main>
-    <section class="wrapper suggested-articles">
-      <h3>More articles like this</h3>
-      <div class="grid-3">
-        @@include('./components/blog-article.html')
-        @@include('./components/blog-article.html')
-        @@include('./components/blog-article.html')
-      </div>
+    <section class="background-ginger-light">
+      <section class="wrapper wrapper-small suggested-articles">
+        <h3>More articles like this</h3>
+        <div class="grid-3">
+          @@include('./components/blog-article.html')
+          @@include('./components/blog-article.html')
+          @@include('./components/blog-article.html')
+        </div>
+      </section>
     </section>
     @@include('./components/join-mailing-list.html')
     @@include('./components/footer.html')

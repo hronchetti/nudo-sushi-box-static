@@ -6,6 +6,10 @@
 
   .basket-row {
     padding-bottom: 0;
+
+    .product-name {
+      cursor: pointer;
+    }
   }
 
   .basket-item-controls {

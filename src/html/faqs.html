@@ -60,11 +60,9 @@
       </article>
       <aside class="sidebar-layout-sidebar-wrapper">
         <div class="sidebar-layout-sidebar">
-          <h3>Our favourites</h3>
-          <section class="sidebar-layout-sidebar-products">
-            @@include('./components/product.html')
-          </section>
-          <section class="sidebar-layout-sidebar-final-push">
+          <section
+            class="sidebar-layout-sidebar-final-push sidebar-layout-sidebar-final-push-no-margin-top"
+          >
             <h3>Love sushi? You’ll love Nudo Sushi Box!</h3>
             <a href="order-online.html" class="button-primary button-arrow"
               >Order online now</a
@@ -72,7 +70,6 @@
           </section>
         </div>
       </aside>
-      @@include('./components/product-preview.html')
     </main>
     @@include('./components/join-mailing-list.html')
     @@include('./components/footer.html')
